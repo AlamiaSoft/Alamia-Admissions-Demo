@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alamia AdmissionsOS — Interactive Prototype Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: "#0B132B",
+              slate: "#1C2541",
+              blue: "#1D4ED8",
+              emerald: "#10B981",
+              amber: "#F59E0B",
+            }
+          },
+          fontFamily: {
+            headline: ["Plus Jakarta Sans", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="min-h-full flex flex-col font-body text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 bg-[#F8FAFC]">
+
+  <!-- Global Prototype Banner -->
+  <div class="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-center text-xs font-medium text-amber-900 select-none">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span><strong>Interactive Design Prototype:</strong> Evaluative demo for candidate <code>DEMO-STD-001</code>. Independent coordination workspace (not an official university portal).</span>
+      </div>
+      <div class="flex items-center gap-3 text-xs">
+        <a href="docs/design-system/DESIGN.md" class="underline text-amber-900 hover:text-amber-700">Design Specification</a>
+        <span>•</span>
+        <a href="README.md" class="underline text-amber-900 hover:text-amber-700">Repository Docs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-[#0B132B] text-white border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-sm">
+          <span class="material-symbols-outlined text-[20px]">verified_user</span>
+        </div>
+        <div>
+          <span class="font-headline font-bold text-[17px] tracking-tight">Alamia AdmissionsOS</span>
+          <span class="ml-2 px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono font-semibold uppercase tracking-wider border border-slate-700">Prototype v2.4</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-medium text-slate-300">
+        <span class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60 font-mono text-[11px] text-slate-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          MY-PK Corridor Specimen
+        </span>
+        <a href="https://github.com/AlamiaSoft/Alamia-Admissions-Demo" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 text-white transition-colors border border-slate-700">
+          <span class="material-symbols-outlined text-[16px]">code</span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <h1 class="font-headline text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Alamia AdmissionsOS Interactive Prototype
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+        High-fidelity, interactive prototypes refined following product and operational discovery. Select an application workspace below to evaluate the admissions coordinator experience or the mobile-first applicant journey.
+      </p>
+    </div>
+
+    <!-- Dual Persona Launcher Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Card 1: Adviser Console -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col justify-between">
+        <div class="p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+              Desktop Workspace • 1280px+
+            </span>
+            <span class="text-xs text-slate-500 font-medium">6 Screens Available</span>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-headline text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+              <span class="material-symbols-outlined text-blue-600 text-[26px]">admin_panel_settings</span>
+              Adviser Operations Console
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              High-density operational workspace for admissions officers and case evaluators. Covers urgent triage queues, candidate dossier verification, multi-institution application matrices, and non-linear case dependency DAGs.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-100">
+            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">Included Core Views:</div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">grid_view</span> Overview Dashboard (Triage)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">person</span> Student Case Detail (Dossier)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">rule_folder</span> Evidence Repository (Ledger)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">assignment</span> Multi-Application Cases</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">checklist</span> Requirement Governance</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-500 text-[15px]">account_tree</span> Workflow &amp; Dependencies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
+          <div class="text-xs text-slate-500">
+            Default scenario: <span class="font-mono text-slate-700 font-semibold">Ahmed Khan</span>
+          </div>
+          <a href="apps/adviser-console/overview-dashboard/code.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs tracking-tight shadow-sm transition-colors">
+            <span>Launch Adviser Console</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Student Companion -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col justify-between">
+        <div class="p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              Mobile-First PWA • 390px Viewport
+            </span>
+            <span class="text-xs text-slate-500 font-medium">5 Screens Available</span>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-headline text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-600 text-[26px]">smartphone</span>
+              Student Companion PWA
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Mobile companion for international university candidates. Eliminates confusion with explicit next actions, clear document attestation status (IBCC attestation), direct adviser messaging, and verified conditional offer terms.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-100">
+            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2">Included Core Views:</div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700">
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-emerald-500 text-[15px]">dashboard</span> Home (Clear Action Center)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-emerald-500 text-[15px]">timeline</span> My Journey (Configurable Pathway)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-emerald-500 text-[15px]">folder_open</span> Document Centre (Vault &amp; Attestation)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-emerald-500 text-[15px]">chat</span> Messages (Direct Adviser Chat)</li>
+              <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-emerald-500 text-[15px]">verified</span> Offer &amp; Status (Condition Terms)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
+          <div class="text-xs text-slate-500">
+            Optimized for <span class="font-mono text-slate-700 font-semibold">Mobile Safari &amp; Chrome</span>
+          </div>
+          <a href="apps/student-companion/home/code.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-tight shadow-sm transition-colors">
+            <span>Launch Student Companion</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Screen Matrix & Visual Catalog -->
+    <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+        <div>
+          <h3 class="font-headline text-lg font-bold text-slate-900 tracking-tight">Complete Screen Catalog (11 Screens)</h3>
+          <p class="text-xs text-slate-500">Every screen generated in Google Stitch and refined per review feedback.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-50 text-blue-700 border border-blue-200">8 Updated</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-50 text-emerald-700 border border-emerald-200">3 New</span>
+        </div>
+      </div>
+
+      <!-- Adviser Console Table -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-semibold text-slate-700 uppercase tracking-wider flex items-center gap-2">
+          <span class="material-symbols-outlined text-blue-600 text-[16px]">desktop_windows</span>
+          Adviser Operations Console (Desktop)
+        </h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border border-slate-100 rounded-lg overflow-hidden">
+            <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-100">
+              <tr>
+                <th class="py-2.5 px-3">Screen Name</th>
+                <th class="py-2.5 px-3">Role</th>
+                <th class="py-2.5 px-3">Key Focus &amp; Refinement</th>
+                <th class="py-2.5 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Overview Dashboard</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Operational triage, pending blocker queues, and urgency categorization</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/overview-dashboard/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Student Case Detail</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Ahmed Khan flagship dossier, explicit evidence evaluation &amp; disclaimer tags</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/student-case-detail/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Requirements &amp; Evidence</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Human adjudication ledger, source provenance tracking, and conflict audit</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/requirements-evidence/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors bg-emerald-50/20">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Student Profile &amp; Multi-Application Cases</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-mono font-semibold">New</span></td>
+                <td class="py-2.5 px-3 text-slate-600">Decouples core applicant vault from multiple simultaneous university applications</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/multi-application-cases/code.html" class="text-emerald-700 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors bg-emerald-50/20">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Requirement Governance &amp; Applicability</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-mono font-semibold">New</span></td>
+                <td class="py-2.5 px-3 text-slate-600">Separates institutional requirement definitions from candidate exemption dockets</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/requirement-governance/code.html" class="text-emerald-700 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors bg-emerald-50/20">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Case Workflow &amp; Parallel Dependencies</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-mono font-semibold">New</span></td>
+                <td class="py-2.5 px-3 text-slate-600">Non-linear process model mapping parallel prerequisites and task ownership</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/adviser-console/workflow-dependencies/code.html" class="text-emerald-700 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Student Companion Table -->
+      <div class="space-y-3 pt-4">
+        <h4 class="text-xs font-semibold text-slate-700 uppercase tracking-wider flex items-center gap-2">
+          <span class="material-symbols-outlined text-emerald-600 text-[16px]">phone_iphone</span>
+          Student Companion PWA (Mobile)
+        </h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border border-slate-100 rounded-lg overflow-hidden">
+            <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-100">
+              <tr>
+                <th class="py-2.5 px-3">Screen Name</th>
+                <th class="py-2.5 px-3">Role</th>
+                <th class="py-2.5 px-3">Key Focus &amp; Refinement</th>
+                <th class="py-2.5 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Home</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Applicant action center separating student tasks from internal adviser work</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/student-companion/home/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">My Journey</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Configurable milestone progression eliminating rigid or guaranteed timelines</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/student-companion/my-journey/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Document Centre</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Clear lifecycle states for uploads, IBCC attestation requirements &amp; rejection notes</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/student-companion/documents/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Messages</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Canonical 1:1 chat between candidate and adviser with thread sanitization</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/student-companion/messages/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-2.5 px-3 font-medium text-slate-900">Offer &amp; Application Status</td>
+                <td class="py-2.5 px-3"><span class="px-1.5 py-0.5 rounded text-[10px] bg-blue-50 text-blue-700 font-mono">Updated</span></td>
+                <td class="py-2.5 px-3 text-slate-500">Conditional offer terms without false API sync or unconfirmed partner claims</td>
+                <td class="py-2.5 px-3 text-right"><a href="apps/student-companion/offer-status/code.html" class="text-blue-600 font-semibold hover:underline">Open &rarr;</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>
+        <span>Alamia AdmissionsOS Prototype</span> • <span>Governed by <a href="https://github.com/AlamiaSoft/Alamia-Skills-System" class="text-blue-600 underline">Alamia-Skills-System</a></span>
+      </div>
+      <div>
+        <span>For Internal &amp; Design-Partner Evaluation Only</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

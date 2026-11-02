@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "on-error": "#ffffff", "surface-dim": "#cbdbf5", "surface-tint": "#2151da", "on-tertiary-fixed-variant": "#005236", "background": "#f8f9ff", "surface": "#f8f9ff", "tertiary-fixed": "#6ffbbe", "tertiary": "#004f35", "on-error-container": "#93000a", "secondary-fixed-dim": "#bec5e5", "on-surface-variant": "#434655", "error": "#ba1a1a", "on-secondary-fixed": "#131a33", "on-secondary-fixed-variant": "#3e4660", "on-background": "#0b1c30", "outline": "#747686", "on-primary-fixed": "#001551", "on-primary-container": "#cad3ff", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-primary-fixed-variant": "#0039b5", "on-tertiary": "#ffffff", "on-tertiary-container": "#60eeb1", "surface-container-low": "#eff4ff", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "tertiary-container": "#006a48", "primary-fixed": "#dce1ff", "tertiary-fixed-dim": "#4edea3", "inverse-primary": "#b7c4ff", "on-secondary-container": "#5a627e", "primary": "#0037b0", "secondary": "#565d79", "on-secondary": "#ffffff", "inverse-surface": "#213145", "outline-variant": "#c4c5d7", "primary-container": "#1d4ed8", "surface-container-high": "#dce9ff", "secondary-fixed": "#dbe1ff", "secondary-container": "#d8deff", "on-surface": "#0b1c30", "primary-fixed-dim": "#b7c4ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-md": "0.75rem", "margin-compact": "1rem", "margin": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem", "gutter-dense": "0.5rem", "space-xl": "1.5rem" }, "fontFamily": { "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "code-sm": [ "JetBrains Mono" ], "label-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-xl": [ "30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "code-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-margin flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">verified</span></div><div><span class="font-headline-sm text-headline-sm text-primary tracking-tight block">Alamia</span><span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">AdmissionsOS</span></div></div><span class="px-space-xs py-[2px] bg-surface-container-highest text-primary font-code-sm text-code-sm rounded">v2.4</span></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm block mb-space-xs">Operations Desk</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a data-path="overview-dashboard" href="../overview-dashboard/code.html" class="flex items-center gap-space-md px-space-md py-space-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview Dashboard</span></a><a data-path="students-and-profiles" href="../student-case-detail/code.html" class="flex items-center gap-space-md px-space-md py-space-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">group</span><span>Students &amp; Profiles</span></a><a data-path="application-cases" href="../multi-application-cases/code.html" class="flex items-center gap-space-md px-space-md py-space-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-colors font-label-md text-label-md"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">folder_shared</span><span>Application Cases</span></div><span class="px-space-xs py-[2px] bg-tertiary-container text-on-tertiary font-code-sm text-code-sm rounded-full">34</span></a><a data-path="workflow-and-dependencies" href="../workflow-dependencies/code.html" class="bg-blue-600 text-white font-semibold rounded-lg shadow-sm flex items-center gap-space-md px-space-md py-space-sm transition-colors text-[13px]"><span class="material-symbols-outlined text-[18px]">account_tree</span><span>Workflow &amp; Dependencies</span></a><div class="pt-2"><a class="flex items-center justify-between px-2.5 py-2 rounded-md text-[12px] text-amber-400 bg-slate-800/80 hover:bg-slate-800 hover:text-white transition-colors border border-amber-500/20" href="../../../index.html"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-amber-400">home</span><span class="font-medium">Exit to Portal Home</span></div><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
+</nav></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm block mb-space-xs">Verification Ledger</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a data-path="requirements-repository" href="../requirements-evidence/code.html" class="flex items-center gap-space-md px-space-md py-space-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Requirements Repository</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="institution-catalog" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span>Institution Catalog</span></a><a data-path="decision-ledger" href="../requirement-governance/code.html" class="flex items-center gap-space-md px-space-md py-space-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Decision Ledger</span></a></nav></div></div><div class="p-space-md bg-surface-container-low"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a></nav><div class="mt-space-sm pt-space-sm flex items-center justify-between px-space-sm"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim inline-block"></span><span class="font-code-sm text-code-sm text-on-surface-variant">Audit Log Sync: OK</span></div><span class="material-symbols-outlined text-outline text-[16px]">lock</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest z-40 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-8 pl-9 pr-14 bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search applicant, case ID, passport or institution..." type="text"/><kbd class="absolute right-space-sm top-1/2 -translate-y-1/2 px-space-xs py-[2px] bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm rounded">⌘K</kbd></div><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low rounded-lg text-on-surface-variant font-label-md text-label-md whitespace-nowrap"><span class="material-symbols-outlined text-[18px] text-primary">meeting_room</span><span>Desk 04: MENA Advisory</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div><div class="flex items-center gap-space-md"><button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Direct Query Ledger"><span class="material-symbols-outlined text-[18px]">terminal</span></button><button class="relative w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Notifications"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right"><span class="font-label-md text-label-md text-on-surface block leading-tight">Fatima Zahra</span><span class="font-code-sm text-code-sm text-on-surface-variant block">Lead Admissions Officer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Breadcrumbs Canvas -->
+<section class="px-margin pt-space-lg pb-space-md bg-surface-container-lowest shadow-sm">
+<!-- Breadcrumb Line -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm mb-space-sm">
+<span class="hover:text-primary cursor-pointer transition-colors">Students &amp; Profiles</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Ahmed Khan (DEMO-STD-001)</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Application Cases</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Taylor's University (APP-2027-TAY-01)</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Workflow &amp; Parallel Dependencies</span>
+</nav>
+<!-- Header & Action Tier -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Case-Specific Workflow &amp; Asynchronous Dependency Graph</h1>
+<span class="inline-flex items-center gap-1 px-space-xs py-[2px] bg-tertiary-container text-on-tertiary font-code-sm text-code-sm rounded-lg font-medium">
+<span class="material-symbols-outlined text-[12px]">schema</span>
+            NON-LINEAR ARCHITECTURE §6.3 COMPLIANT
+          </span>
+<span class="px-space-xs py-[2px] bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm rounded">
+            CASE: APP-2027-TAY-01
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Decoupled macro case lifecycle operating alongside concurrent, non-blocking operational work streams for <strong class="text-on-surface font-medium">Bachelor of Software Engineering (Honours)</strong>.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="h-8 px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" id="btn-export">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span>Export Ledger</span>
+</button>
+<button class="h-8 px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" id="btn-analysis">
+<span class="material-symbols-outlined text-[16px] text-primary">insights</span>
+<span>Run Dependency Analysis</span>
+</button>
+<button class="h-8 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" id="btn-spawn">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Spawn Work Item</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Macro Lifecycle Banner (§6.3 Architectural Explanation) -->
+<section class="px-margin py-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Architectural Explainer Pill -->
+<div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Macro Case Lifecycle Decoupling Pattern (§6.3)</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Evaluation Pipeline: Asynchronous Concurrent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-[2px]">
+            Macro Case Status <strong class="text-on-surface font-medium">“Conditional Offer Issued / Under Committee Evaluation”</strong> progresses independently from granular document bottlenecks. Academic evaluation, bursary adjustments, and student transcript uploads advance concurrently without arbitrary linear blockages.
+          </p>
+</div>
+</div>
+<!-- Macro Stage Progress Gauge -->
+<div class="pt-space-xs">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Macro Stage Progress</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">STAGE 3 OF 5 • ACTIVE EVALUATION</span>
+</div>
+<!-- 5-Stage Stepper Layout -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-xs">
+<!-- Stage 1: Done -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<div class="min-w-0">
+<span class="font-code-sm text-code-sm text-tertiary block font-semibold leading-tight">01. Staging</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block text-[11px]">Dossier Sealed</span>
+</div>
+</div>
+<!-- Stage 2: Done -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<div class="min-w-0">
+<span class="font-code-sm text-code-sm text-tertiary block font-semibold leading-tight">02. Submission</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block text-[11px]">Taylor's Registry</span>
+</div>
+</div>
+<!-- Stage 3: ACTIVE & CONCURRENT -->
+<div class="p-space-xs bg-primary-container text-on-primary rounded-lg flex items-center gap-space-xs shadow-sm">
+<span class="w-5 h-5 rounded-full bg-on-primary text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px] animate-spin">sync</span>
+</span>
+<div class="min-w-0">
+<span class="font-code-sm text-code-sm text-on-primary block font-semibold leading-tight">03. Univ Review</span>
+<span class="font-body-sm text-body-sm text-on-primary-container truncate block text-[11px]">3 Parallel Streams</span>
+</div>
+</div>
+<!-- Stage 4: Pending -->
+<div class="p-space-xs bg-surface-container rounded-lg flex items-center gap-space-xs opacity-75">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">hourglass_empty</span>
+</span>
+<div class="min-w-0">
+<span class="font-code-sm text-code-sm text-on-surface-variant block font-semibold leading-tight">04. Conditions</span>
+<span class="font-body-sm text-body-sm text-outline truncate block text-[11px]">Gated on IBCC &amp; MTH</span>
+</div>
+</div>
+<!-- Stage 5: Scheduled -->
+<div class="p-space-xs bg-surface-container rounded-lg flex items-center gap-space-xs opacity-60">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">flight_takeoff</span>
+</span>
+<div class="min-w-0">
+<span class="font-code-sm text-code-sm text-outline block font-semibold leading-tight">05. Unconditional</span>
+<span class="font-body-sm text-body-sm text-outline truncate block text-[11px]">EMGS Visa Staged</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-Column Layout: Streams (Left) + Detail Context Drawer (Right) -->
+<section class="px-margin pb-space-lg grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Primary Operational Streams (8 Cols on xl) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Stream Header Stats Bar -->
+<div class="grid grid-cols-3 gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="p-space-xs bg-surface-container-low rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-error uppercase block">Candidate SLA</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold block">1 Blocked Item</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Remaining: 34h 12m</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Faculty Committee</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold block">1 Active Docket</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Target: Board Mtg #41</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-tertiary uppercase block">Desk 04 Advisory</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold block">2 Sub-tracks Active</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Bursary + EMGS Pre-fill</span>
+</div>
+</div>
+<!-- TRACK A: Student Document Fulfillment -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Track Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-md bg-error text-on-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight block">Track A: Candidate Fulfillment Stream</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Owner: Ahmed Khan (Candidate) • SLA: 48 Hours • Priority: Critical Path</span>
+</div>
+</div>
+<span class="px-space-xs py-[2px] bg-error-container text-on-error-container font-code-sm text-code-sm rounded font-medium">1 Action Required</span>
+</div>
+<!-- Work Item A1: Cropped IBCC Stamp (Blocked on Student) -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg mb-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<h2 class="font-label-md text-label-md text-on-surface font-semibold">HSSC Part-II Attested Marks Sheet Replacement</h2>
+<span class="font-code-sm text-code-sm px-space-xs py-[1px] bg-surface-container-high rounded text-on-surface-variant">ITEM-DOC-092</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Uploaded document shows cropped Inter-Board Coordination Commission (IBCC) attestation stamp on reverse fold. Original resolution insufficient for legal registry archives.
+              </p>
+<!-- Non-blocking note -->
+<div class="p-space-xs bg-surface-container-low rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-tertiary shrink-0">check_circle</span>
+<span class="font-code-sm text-code-sm text-tertiary">
+<strong>Non-Blocking for Syllabus Review:</strong> Computing Credit Evaluation Board is reviewing syllabus concurrently.
+                </span>
+</div>
+</div>
+<!-- Due Badge & Actions -->
+<div class="text-right shrink-0 space-y-space-xs">
+<span class="inline-block px-space-xs py-[2px] bg-error-container text-on-error-container font-code-sm text-code-sm rounded font-semibold">
+                Due: 21 Jan 2027, 18:00 MYT
+              </span>
+<div class="flex items-center gap-space-xs justify-end">
+<button class="h-7 px-space-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+<span>Flag</span>
+</button>
+<button class="h-7 px-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+<span>View Doc Centre Flag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Work Item A2: O-Level Maths Certificate (Cleared) -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">Cambridge O-Level Additional Mathematics Certificate</span>
+<span class="font-code-sm text-code-sm text-tertiary">Completed • Auto-cleared from Master Vault (15 Jan 2027)</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">VAULT-SYNC-OK</span>
+</div>
+</div>
+<!-- TRACK B: Academic Faculty Adjudication -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Track Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">school</span>
+</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight block">Track B: Academic Faculty Adjudication</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Owner: Computing Credit Evaluation Committee • Liaison: Fatima Zahra</span>
+</div>
+</div>
+<span class="px-space-xs py-[2px] bg-secondary-container text-on-secondary-container font-code-sm text-code-sm rounded font-medium">In Committee Review</span>
+</div>
+<!-- Work Item B1: MTH102 Discrete Mathematics Equivalency -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg mb-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<h2 class="font-label-md text-label-md text-on-surface font-semibold">MTH102 Discrete Mathematics Curriculum Equivalency</h2>
+<span class="font-code-sm text-code-sm px-space-xs py-[1px] bg-surface-container-high rounded text-on-surface-variant">DOCKET #DOC-MTH-014</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lodged with Prof. Tan Cheng Lock (Taylor's School of Computer Science). Evaluating Pakistani National Curriculum Board Syllabus (FSc Math v2.4) against MTH102 module prerequisites for direct Year-1 credit transfer.
+              </p>
+<!-- Concurrency Callout -->
+<div class="p-space-xs bg-surface-container-low rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary shrink-0">speed</span>
+<span class="font-code-sm text-code-sm text-on-surface">
+<strong>Decoupled Execution:</strong> Faculty review proceeds concurrently regardless of student's HSSC attestation stamp upload status.
+                </span>
+</div>
+<!-- Dependencies Tag Cluster -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inputs:</span>
+<span class="px-space-xs py-[1px] bg-surface-container-high text-on-surface font-code-sm text-code-sm rounded">Pakistani Syllabus v2.4 (Attached)</span>
+<span class="px-space-xs py-[1px] bg-surface-container-high text-on-surface font-code-sm text-code-sm rounded">Precedent Memo #PREC-2025-PAK-04</span>
+<span class="px-space-xs py-[1px] bg-tertiary-container text-on-tertiary font-code-sm text-code-sm rounded">Calculus I: Waived</span>
+</div>
+</div>
+<!-- Milestone & Nudge Action -->
+<div class="text-right shrink-0 space-y-space-xs">
+<span class="inline-block px-space-xs py-[2px] bg-surface-container-high text-on-surface font-code-sm text-code-sm rounded font-medium">
+                Milestone: Board Mtg #41 (22 Jan)
+              </span>
+<div class="flex items-center gap-space-xs justify-end">
+<button class="h-7 px-space-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Memo History</span>
+</button>
+<button class="h-7 px-space-xs bg-secondary hover:bg-on-surface-variant text-on-secondary font-label-sm text-label-sm rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Nudge Faculty Liaison</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Work Item B2: IELTS 6.5 Satisfied -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">English Language Benchmark Verification</span>
+<span class="font-code-sm text-code-sm text-tertiary">Directly Satisfied • IELTS 6.5 TRF verified against Taylor's Registry Benchmark</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TRF: 24PK009418KHNA</span>
+</div>
+</div>
+<!-- TRACK C: Adviser Advisory & Institutional Consultation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Track Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-md bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">support_agent</span>
+</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight block">Track C: Adviser Advisory &amp; Institutional Consultation</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Owner: Fatima Zahra (Lead Admissions Officer, Desk 04)</span>
+</div>
+</div>
+<span class="px-space-xs py-[2px] bg-tertiary-fixed text-on-tertiary-fixed font-code-sm text-code-sm rounded font-medium">Liaison Active</span>
+</div>
+<!-- Work Item C1: Bursary Clarification -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg mb-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h2 class="font-label-md text-label-md text-on-surface font-semibold">Conditional Offer Fee Schedule &amp; Tuition Rebate Clarification</h2>
+<span class="font-code-sm text-code-sm px-space-xs py-[1px] bg-surface-container-high rounded text-on-surface-variant">QUERY #Q-BUR-901</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Adviser inquiry dispatched to Taylor's International Bursar Office. Requesting explicit inclusion of the RM 5,000 South Asia Regional Talent Bursary on the revised Conditional Offer Schedule before candidate makes initial registration deposit.
+              </p>
+<div class="p-space-xs bg-surface-container-low rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary shrink-0">info</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">
+                  Runs concurrently; does not delay academic math syllabus adjudication or student transcript scans.
+                </span>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="text-right shrink-0 space-y-space-xs">
+<span class="inline-block px-space-xs py-[2px] bg-surface-container-high text-on-surface font-code-sm text-code-sm rounded font-medium">
+                Sent: 19 Jan 2027 (Awaiting Bursar)
+              </span>
+<div class="flex items-center gap-space-xs justify-end">
+<button class="h-7 px-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm rounded flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">mark_email_read</span>
+<span>View Thread (Desk 04)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Work Item C2: EMGS Staging -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[13px]">pause_circle</span>
+</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">EMGS Health Declaration Staging</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Staged • Dormant until Stage 4 Unconditional Offer issuance • Pre-fill form validated</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-outline">DORMANT_PREPARED</span>
+</div>
+</div>
+<!-- Tabular Section: Interactive Dependency & Blockage Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Cross-Stream Dependency &amp; Blockage Matrix</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deterministic evaluation showing what stalls Stage 4 Release vs what runs concurrently.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm px-space-xs py-[2px] bg-tertiary-container text-on-tertiary rounded">1 Non-Critical Blocker</span>
+<span class="font-code-sm text-code-sm px-space-xs py-[2px] bg-surface-container-high text-on-surface rounded">4 Parallel Items</span>
+</div>
+</div>
+<!-- Matrix Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-sm font-semibold">Work Item ID &amp; Name</th>
+<th class="py-space-xs px-space-sm font-semibold">Stream</th>
+<th class="py-space-xs px-space-sm font-semibold">Owner</th>
+<th class="py-space-xs px-space-sm font-semibold">State</th>
+<th class="py-space-xs px-space-sm font-semibold">Downstream Impact</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm">
+<div class="font-medium text-on-surface">HSSC Part-II Marks Sheet</div>
+<span class="font-code-sm text-code-sm text-error">ITEM-DOC-092</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-[1px] bg-error-container text-on-error-container font-code-sm text-code-sm rounded">Candidate (A)</span>
+</td>
+<td class="py-space-sm px-space-sm font-code-sm text-code-sm">Ahmed Khan</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Blocked
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-code-sm text-code-sm text-error font-semibold block">Blocks Stage 4 Release</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Does NOT block Faculty Syllabus Review</span>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<button class="h-6 px-space-xs bg-primary text-on-primary hover:bg-primary-container font-code-sm text-code-sm rounded transition-colors">
+                    Sms Nudge
+                  </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm">
+<div class="font-medium text-on-surface">MTH102 Syllabus Equivalency</div>
+<span class="font-code-sm text-code-sm text-secondary">DOC-MTH-014</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-[1px] bg-secondary-container text-on-secondary-container font-code-sm text-code-sm rounded">Faculty (B)</span>
+</td>
+<td class="py-space-sm px-space-sm font-code-sm text-code-sm">Prof. Tan Cheng Lock</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Committee Mtg
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface block">Determines Year 1 Credit Exemption</span>
+<span class="font-body-sm text-body-sm text-tertiary text-[11px]">Runs parallel with HSSC replacement</span>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<button class="h-6 px-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-code-sm text-code-sm rounded transition-colors">
+                    Docket Ref
+                  </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm">
+<div class="font-medium text-on-surface">Bursary Schedule Re-issuance</div>
+<span class="font-code-sm text-code-sm text-primary">QUERY #Q-BUR-901</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-[1px] bg-surface-container-high text-primary font-code-sm text-code-sm rounded">Liaison (C)</span>
+</td>
+<td class="py-space-sm px-space-sm font-code-sm text-code-sm">Fatima Zahra</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Inquiry Lodged
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-code-sm text-code-sm text-on-surface block">Financial Acceptance prerequisite</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Independent track</span>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<button class="h-6 px-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-code-sm text-code-sm rounded transition-colors">
+                    View Query
+                  </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm">
+<div class="font-medium text-on-surface">EMGS Visa Health Dossier</div>
+<span class="font-code-sm text-code-sm text-outline">EMGS-PRE-04</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-[1px] bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm rounded">Liaison (C)</span>
+</td>
+<td class="py-space-sm px-space-sm font-code-sm text-code-sm">Fatima Zahra</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Dormant / Ready
+                  </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-code-sm text-code-sm text-outline block">Pre-requisite: Unconditional Offer</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">Unblocked automatically at Stage 5</span>
+</td>
+<td class="py-space-sm px-space-sm text-right">
+<span class="font-code-sm text-code-sm text-outline">Standby</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Contextual Side Drawer: Live Triage & Visual Vector Node Graph (4 Cols on xl) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Architectural Triage Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">policy</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Live Dependency Triage</span>
+</div>
+<span class="px-space-xs py-[2px] bg-tertiary-container text-on-tertiary font-code-sm text-code-sm rounded">ACTIVE AUDIT</span>
+</div>
+<!-- Explanatory Callout Box -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold block">Why can the case proceed to University Review while a document is missing?</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Under <strong class="text-on-surface font-medium">§6.3 Decoupled Admissions Architecture</strong>, academic evaluation proceeds on syllabus merit while physical legalization runs asynchronously. Physical IBCC stamping verification does not gate professor syllabus reading.
+          </p>
+</div>
+<!-- Live Vector Dependency Visualizer (Inline SVG Diagram) -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs self-start">Visual Dependency Mesh</span>
+<svg class="w-full h-44 text-on-surface" fill="none" viewbox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+<!-- Node A: HSSC Missing -->
+<rect fill="#ffdad6" height="34" rx="4" width="100" x="10" y="15"></rect>
+<text fill="#ba1a1a" font-family="Inter" font-size="9" font-weight="600" x="20" y="32">Candidate: HSSC</text>
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="8" x="20" y="43">Cropped Stamp [!]</text>
+<!-- Node B: Faculty Review -->
+<rect fill="#bec5e5" height="34" rx="4" width="100" x="10" y="65"></rect>
+<text fill="#131a33" font-family="Inter" font-size="9" font-weight="600" x="20" y="82">Faculty: MTH102</text>
+<text fill="#3e4660" font-family="JetBrains Mono" font-size="8" x="20" y="93">Syllabus Review</text>
+<!-- Node C: Bursary Query -->
+<rect fill="#cad3ff" height="34" rx="4" width="100" x="10" y="115"></rect>
+<text fill="#001551" font-family="Inter" font-size="9" font-weight="600" x="20" y="132">Adviser: Bursary</text>
+<text fill="#0039b5" font-family="JetBrains Mono" font-size="8" x="20" y="143">RM 5,000 Query</text>
+<!-- Convergence Node: Stage 4 Clearing -->
+<rect fill="#0037b0" height="44" rx="4" width="100" x="230" y="60"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="9" font-weight="600" x="240" y="78">Stage 4: Clearing</text>
+<text fill="#cad3ff" font-family="Inter" font-size="8" x="240" y="89">Unconditional</text>
+<text fill="#cad3ff" font-family="JetBrains Mono" font-size="7" x="240" y="98">Release Gate</text>
+<!-- Connection Paths (Asynchronous vs Gating) -->
+<!-- Path A: Blocked until stamp upload -->
+<path d="M110 32 C 170 32, 170 70, 230 70" stroke="#ba1a1a" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<circle cx="170" cy="51" fill="#ba1a1a" r="3"></circle>
+<!-- Path B: Parallel academic review -->
+<path d="M110 82 L 230 82" stroke="#565d79" stroke-width="1.5"></path>
+<circle cx="170" cy="82" fill="#565d79" r="3"></circle>
+<!-- Path C: Financial validation -->
+<path d="M110 132 C 170 132, 170 94, 230 94" stroke="#0037b0" stroke-width="1.5"></path>
+<circle cx="170" cy="113" fill="#0037b0" r="3"></circle>
+</svg>
+<div class="flex items-center justify-between w-full text-[10px] font-code-sm text-code-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-0.5 bg-error inline-block"></span> Blocking Gate</span>
+<span class="flex items-center gap-1"><span class="w-2 h-0.5 bg-secondary inline-block"></span> Parallel Faculty</span>
+<span class="flex items-center gap-1"><span class="w-2 h-0.5 bg-primary inline-block"></span> Adviser Liaison</span>
+</div>
+</div>
+<!-- Candidate Dossier Snapshot Card -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Applicant Snapshot</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">DEMO-STD-001</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">account_box</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block leading-tight">Ahmed Hassan Khan</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant block">Passport: PK-9402194</span>
+<span class="font-code-sm text-code-sm text-tertiary block font-medium">Prior Institution: Beaconhouse Margalla</span>
+</div>
+</div>
+</div>
+<!-- Audit & Cryptographic Signature Box -->
+<div class="p-space-sm bg-surface-container rounded-lg space-y-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-code-sm text-code-sm font-semibold">AUDIT SYNC HASH</span>
+<span class="font-code-sm text-code-sm text-tertiary">VERIFIED</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded font-code-sm text-code-sm text-on-surface-variant break-all select-all">
+            sha256:7f3a9e22c06497ab2c9f5e01...d8a4e81
+          </div>
+<div class="flex items-center justify-between pt-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>Signed: Fatima Zahra (Lead)</span>
+<span>20 Jan 2027 10:14 UTC</span>
+</div>
+</div>
+<!-- Quick Operational Override Button -->
+<button class="w-full h-8 px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" id="btn-override">
+<span class="material-symbols-outlined text-[16px] text-outline">lock_open</span>
+<span>Request Policy §6.3 Exception Release</span>
+</button>
+</div>
+<!-- Historical Audit Timeline Feed -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Workflow Activity Stream</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Live Audit</span>
+</div>
+<div class="relative pl-4 space-y-space-md before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Timeline Entry 1 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Faculty Docket DOC-MTH-014 Registered</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Prof. Tan Cheng Lock marked agenda for Meeting #41.</span>
+<span class="font-code-sm text-code-sm text-outline">Today, 09:42 MYT • Fatima Zahra</span>
+</div>
+<!-- Timeline Entry 2 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-error ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Student Upload Defect Detected</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">HSSC stamp cut off. Auto-flagged via Document Centre OCR.</span>
+<span class="font-code-sm text-code-sm text-outline">Yesterday, 16:30 MYT • DocOCR Daemon</span>
+</div>
+<!-- Timeline Entry 3 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-tertiary ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">IELTS Score Verified &amp; Cleared</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Score 6.5 accepted directly against Taylor's English Benchmark.</span>
+<span class="font-code-sm text-code-sm text-outline">18 Jan 2027, 11:15 MYT • System Registry API</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal Drawer Overlay (Simulation for + Spawn Work Item) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md" id="spawn-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-xl p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Spawn Autonomous Work Item</h2>
+<span class="font-code-sm text-code-sm text-on-surface-variant">§6.3 Non-blocking stream attachment</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-outline" id="btn-close-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Target Parallel Track</label>
+<select class="w-full h-8 px-space-sm bg-surface-container-low text-on-surface rounded-lg focus:outline-none font-body-sm text-body-sm">
+<option>Track A: Candidate Document Fulfillment</option>
+<option>Track B: Academic Faculty Adjudication</option>
+<option selected="">Track C: Adviser Advisory &amp; Institutional Consultation</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Item Title / Descriptor</label>
+<input class="w-full h-8 px-space-sm bg-surface-container-low text-on-surface rounded-lg focus:outline-none font-body-sm text-body-sm" placeholder="e.g. Inquire on Accommodation Early Deposit Exemption" type="text" value="Taylor's Bursary Early Payment Rebate Verification"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Dependency Relationship</label>
+<select class="w-full h-8 px-space-sm bg-surface-container-low text-on-surface rounded-lg focus:outline-none font-body-sm text-body-sm">
+<option>Autonomous / Non-Blocking (Concurrent evaluation)</option>
+<option>Soft Precedent (Informs Stage 4 Conditions)</option>
+<option>Hard Gate (Strictly blocks Stage 5 Unconditional Release)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Assigned Liaison / Evaluator</label>
+<input class="w-full h-8 px-space-sm bg-surface-container-low text-on-surface rounded-lg focus:outline-none font-body-sm text-body-sm" type="text" value="Fatima Zahra (Desk 04)"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="h-8 px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors" id="btn-cancel-modal">
+          Cancel
+        </button>
+<button class="h-8 px-space-md bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded-lg flex items-center gap-1 transition-colors" id="btn-confirm-spawn">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Attach to Stream</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction wiring for the dashboard
+  (function() {
+    const spawnBtn = document.getElementById('btn-spawn');
+    const modal = document.getElementById('btn-close-modal')?.closest('#spawn-modal');
+    const closeModalBtn = document.getElementById('btn-close-modal');
+    const cancelModalBtn = document.getElementById('btn-cancel-modal');
+    const confirmSpawnBtn = document.getElementById('btn-confirm-spawn');
+    const analysisBtn = document.getElementById('btn-analysis');
+    const exportBtn = document.getElementById('btn-export');
+    const overrideBtn = document.getElementById('btn-override');
+
+    if (spawnBtn && modal) {
+      spawnBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    }
+
+    const hideModal = () => {
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    closeModalBtn?.addEventListener('click', hideModal);
+    cancelModalBtn?.addEventListener('click', hideModal);
+
+    confirmSpawnBtn?.addEventListener('click', () => {
+      alert('Work Item spawned successfully under Track C (§6.3 Asynchronous Pipeline).');
+      hideModal();
+    });
+
+    analysisBtn?.addEventListener('click', () => {
+      alert('Dependency Analysis: 0 circular dependencies detected. Critical path gates on HSSC replacement (Item ITEM-DOC-092) for Stage 4 clearing only. Faculty stream B is independent.');
+    });
+
+    exportBtn?.addEventListener('click', () => {
+      alert('Exporting Dependency Ledger for APP-2027-TAY-01 with cryptographic audit trail.');
+    });
+
+    overrideBtn?.addEventListener('click', () => {
+      alert('Section 6.3 Policy Exception requested. Requires Senior Registrar dual-authorization key.');
+    });
+  })();
+</script></main></div></body></html>

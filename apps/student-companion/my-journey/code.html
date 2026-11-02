@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Alamia AdmissionsOS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "outline": "#747686", "on-error-container": "#93000a", "surface-container": "#e5eeff", "secondary": "#565d79", "on-primary": "#ffffff", "on-secondary-container": "#5a627e", "secondary-fixed-dim": "#bec5e5", "primary-fixed-dim": "#b7c4ff", "on-background": "#0b1c30", "surface": "#f8f9ff", "tertiary-fixed": "#6ffbbe", "error": "#ba1a1a", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "on-secondary-fixed": "#131a33", "primary-container": "#1d4ed8", "on-secondary": "#ffffff", "primary-fixed": "#dce1ff", "secondary-container": "#d8deff", "background": "#f8f9ff", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "surface-container-high": "#dce9ff", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "surface-tint": "#2151da", "inverse-primary": "#b7c4ff", "on-tertiary-container": "#60eeb1", "on-primary-fixed-variant": "#0039b5", "on-surface-variant": "#434655", "tertiary": "#004f35", "primary": "#0037b0", "secondary-fixed": "#dbe1ff", "on-primary-container": "#cad3ff", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#3e4660", "on-surface": "#0b1c30", "tertiary-container": "#006a48", "on-primary-fixed": "#001551", "surface-dim": "#cbdbf5", "on-tertiary-fixed": "#002113", "outline-variant": "#c4c5d7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1.5rem", "space-xl": "1.5rem", "gutter-dense": "0.5rem", "gutter": "1rem", "space-lg": "1rem", "margin-compact": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-full"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_1px_6px_rgba(0,0,0,0.02)] pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2.5"><button aria-label="Open Menu" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors shrink-0" id="drawer-trigger" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-sm">A</div><div class="flex flex-col"><span class="font-headline-sm text-[15px] font-bold text-on-surface tracking-tight leading-none">Alamia</span><span class="font-label-sm text-[10px] font-semibold text-secondary uppercase tracking-wider leading-none mt-1">STUDENT OS</span></div></div></div><div class="flex items-center gap-1.5"><button aria-label="Contact Adviser" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high/60 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">support_agent</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high/60 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Account" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 text-on-primary shadow-sm hover:opacity-95 active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Header & Pathway Overview -->
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Adaptive Pathway</span>
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container px-space-xs py-0.5 rounded">DEMO-STD-001 • Cycle 2027</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Admission &amp; Enrolment Pathway</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Bachelor of Software Engineering (Honours) — Taylor's University Lakeside Campus • Cohort Target: September 2027 (Demonstration Cycle)</p>
+</div>
+<!-- Adaptive Pathway Status Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Phase: Academic Review</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">2 parallel evaluation tracks in progress • 1 student action required</span>
+</div>
+<span class="bg-primary/10 text-primary font-bold text-[12px] px-2.5 py-1 rounded-full shrink-0">Phase 1 of 2</span>
+</div>
+<!-- Interactive Progress Bar indicating parallel flow -->
+<div class="flex flex-col gap-1.5">
+<div class="grid grid-cols-6 gap-1 w-full h-2 rounded-full overflow-hidden bg-surface-container p-0.5">
+<div class="h-full rounded-full bg-tertiary" title="Profile Cleared"></div>
+<div class="h-full rounded-full bg-error" title="Action Needed: Attestation"></div>
+<div class="h-full rounded-full bg-tertiary" title="English Cross-checked"></div>
+<div class="h-full rounded-full bg-primary animate-pulse" title="Parallel Track A: Math Review"></div>
+<div class="h-full rounded-full bg-primary animate-pulse" title="Parallel Track B: Faculty Evaluation"></div>
+<div class="h-full rounded-full bg-surface-container-high" title="Milestone: Offer Issuance"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-secondary font-medium px-0.5">
+<span>Phase 1: Admission &amp; Evaluation</span>
+<span>Phase 2: Post-Offer (Conditionally Locked)</span>
+</div>
+</div>
+<!-- Quick Summary Pills -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg text-[11px]">
+<div class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span>2 Cleared</span>
+</div>
+<div class="flex items-center gap-1 text-error font-semibold">
+<span class="material-symbols-outlined text-[15px]">error</span>
+<span>1 Action Required</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">sync</span>
+<span>2 Parallel Tracks</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span>Phase 2 Deferred</span>
+</div>
+</div>
+</div>
+<!-- Filter Tabs with accessible touch targets -->
+<div class="flex p-0.5 bg-surface-container-high rounded-lg gap-1" id="filter-group">
+<button class="filter-btn flex-1 min-h-[44px] py-1.5 px-space-sm rounded-lg font-label-sm text-label-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all text-center select-none font-semibold" data-filter="all" type="button">All Pathway Steps</button>
+<button class="filter-btn flex-1 min-h-[44px] py-1.5 px-space-sm rounded-lg font-label-sm text-label-sm text-secondary hover:text-on-surface transition-all text-center select-none" data-filter="active" type="button">Active &amp; Actionable</button>
+<button class="filter-btn flex-1 min-h-[44px] py-1.5 px-space-sm rounded-lg font-label-sm text-label-sm text-secondary hover:text-on-surface transition-all text-center select-none" data-filter="completed" type="button">Completed</button>
+</div>
+<!-- TIMELINE CONTAINER -->
+<div class="relative flex flex-col mt-space-xs gap-space-lg" id="timeline-container">
+<!-- ================= PHASE 1 SECTION ================= -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-high/60">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase bg-primary text-on-primary">PHASE 1</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Admission &amp; Evaluation</span>
+</div>
+<span class="text-[11px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">Current Active Phase</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Focuses strictly on academic equivalence, program eligibility requirements, and prerequisite credit transfer assessments.</p>
+<div class="relative flex flex-col mt-2">
+<div class="absolute left-[19px] top-4 bottom-6 w-[2px] bg-surface-container-high z-0"></div>
+<!-- Step 1 (Completed) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="completed">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">done</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 01</span>
+<span class="bg-surface-container text-tertiary text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Verified by Adviser
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Initial Profile &amp; Corridor Routing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Candidate profile bio, international student routing, and regional qualification verified by Fatima Zahra on 10 Jan.</p>
+</div>
+</div>
+<!-- Step 2 (Action Required / Urgent) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center shrink-0 shadow-md ring-2 ring-error/30">
+<span class="material-symbols-outlined text-error text-[20px]">priority_high</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-error/40 shadow-md flex flex-col gap-space-xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-error font-bold">Step 02</span>
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+<span class="bg-error-container text-on-error-container font-semibold text-[11px] px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  Action Required • Due in 48h
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">HSSC Credential Attestation</span>
+<p class="font-body-sm text-body-sm text-on-surface">Replacement scan needed showing both sides and the clear IBCC verification stamp. Transcripts uploaded on 10 Jan were flagged by Taylor's Registry for partial stamp crop.</p>
+<!-- Action Button & Guidance Pill -->
+<div class="pt-1 flex flex-col gap-2">
+<button class="w-full min-h-[44px] bg-primary text-on-primary font-label-md text-label-md font-semibold px-4 py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Upload Replacement Scan</span>
+</button>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-2 border border-surface-container-high/60">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">info</span>
+<div class="text-[11px] text-on-surface-variant leading-tight">
+<strong class="text-on-surface">Source &amp; Guidance Note:</strong> Required under Taylor's International Admissions Registry &amp; Malaysian Qualifications Agency (MQA) credential rules. Adviser note: Clear uncropped corners speed up review by up to 5 working days.
+                  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 (English Language - Cross Checked) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="completed">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">done</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 03</span>
+<span class="bg-surface-container text-tertiary text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Adviser Cross-Checked
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">English Language Equivalence (IELTS 6.5)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified against partner institution guidelines by Fatima Zahra on 15 Jan. Overall 6.5 (R: 6.5, W: 6.5, L: 6.5, S: 6.0) meets the Faculty of Computing minimum standard of Band 6.0.</p>
+</div>
+</div>
+<!-- Step 4: Parallel Track A (In Progress - Handled by Adviser) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-md ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-on-primary text-[20px] animate-pulse">alt_route</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-primary/20 shadow-md flex flex-col gap-space-xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">Step 04 • Parallel Track A</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<span class="bg-primary-fixed text-primary font-semibold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                  In Progress • Handled by Adviser
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Mathematics Prerequisite &amp; Exemption Assessment</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fatima is liaising with Taylor's Computing Department for MTH102 Discrete Mathematics credit exemption using your secondary mathematics syllabus. No student action needed.</p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1 mt-1 border border-surface-container-high/60">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Taylor's Computing Academic Board Docket #DOC-MTH-014</span>
+</div>
+<p class="text-[11px] text-on-surface leading-tight">Syllabus comparison lodged 18 Jan. Precedent under faculty evaluation — supportive adviser guidance note, not an institutional decision.</p>
+</div>
+</div>
+</div>
+<!-- Step 5: Parallel Track B (In Progress - Waiting on University) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-md ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-on-primary text-[20px] animate-pulse">hourglass_top</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-primary/20 shadow-md flex flex-col gap-space-xs min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">Step 05 • Parallel Track B</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<span class="bg-primary-fixed text-primary font-semibold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                  In Progress • Waiting on University
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Formal Application Review by Faculty</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Taylor's University Admissions Committee is processing early-file clearance and international quota allocation. Average evaluation timeline: 7–10 working days.</p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-2 border border-surface-container-high/60 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0">menu_book</span>
+<div class="text-[11px] text-on-surface-variant">
+<strong class="text-on-surface">Source:</strong> Taylor's Academic Regulations 2026/2027 Handbook (§4.2 International Entrants).
+                </div>
+</div>
+</div>
+</div>
+<!-- Step 6: Conditional Milestone -->
+<div class="timeline-item flex items-start gap-space-md relative z-10" data-status="active">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">assignment_turned_in</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Step 06</span>
+<span class="bg-secondary-container text-on-secondary-container text-[11px] font-semibold px-2 py-0.5 rounded-full">
+                  Next Milestone • Conditional
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Offer Issuance &amp; Conditions Clearance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">University formal offer is conditionally issued subject to document attestation clearance (Step 2) and faculty syllabus sign-off.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= PHASE 2 SECTION ================= -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container-high/60">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase bg-secondary text-on-secondary">PHASE 2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Post-Offer &amp; Arrival Guidance</span>
+</div>
+<span class="text-[11px] font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> Conditionally Locked
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Conditionally locked until an unconditional offer is confirmed and accepted. Includes visa processing, accommodation, and arrival logistics.</p>
+<div class="relative flex flex-col mt-2 opacity-85">
+<div class="absolute left-[19px] top-4 bottom-6 w-[2px] bg-surface-container-high z-0"></div>
+<!-- Step 7 (Locked Visa Clearance) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 07</span>
+<span class="bg-surface-container text-secondary text-[11px] font-semibold px-2 py-0.5 rounded-full">Starts Post-Offer Acceptance</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">EMGS Student Visa (VAL) Clearance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Visa approval letters (VAL) and documentation are governed solely by Education Malaysia Global Services (EMGS) and Immigration Department of Malaysia after formal offer acceptance.</p>
+</div>
+</div>
+<!-- Step 8 (Locked Tuition Deposit) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">receipt_long</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 08</span>
+<span class="bg-surface-container text-secondary text-[11px] font-semibold px-2 py-0.5 rounded-full">Post-Offer Fee Guidance</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Tuition Deposit &amp; Fee Schedule</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tuition deposit and initial semester registration invoice guidance will activate once offer terms are accepted.</p>
+</div>
+</div>
+<!-- Step 9 (Optional Accommodation) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10 pb-space-lg" data-status="active">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">apartment</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 09</span>
+<span class="bg-surface-container text-secondary text-[11px] font-semibold px-2 py-0.5 rounded-full">Optional Stage • On Demand</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Campus Residency &amp; Accommodation Booking</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Optional adviser guidance on securing U-Residence on campus or private student apartments in Subang Jaya.</p>
+</div>
+</div>
+<!-- Step 10 (Upcoming Pre-Departure) -->
+<div class="timeline-item flex items-start gap-space-md relative z-10" data-status="active">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">flight_takeoff</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high/60 shadow-sm flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Step 10</span>
+<span class="bg-surface-container text-secondary text-[11px] font-semibold px-2 py-0.5 rounded-full">Upcoming</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Pre-Departure Briefing &amp; KLIA Welcome</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flight itinerary coordination, customs clearance orientation, and Taylor's international student airport welcome kit.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Contact Card with Adviser -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center justify-between gap-space-md shadow-sm border border-surface-container-highest mt-2">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold text-sm">
+          FZ
+        </div>
+<div class="flex flex-col truncate">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Fatima Zahra</span>
+<span class="w-2 h-2 rounded-full bg-tertiary" title="Online now"></span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Lead Admissions Adviser • Online</span>
+</div>
+</div>
+<button class="min-h-[44px] bg-primary text-on-primary font-label-sm text-label-sm font-semibold px-space-md py-2 rounded-lg flex items-center gap-1.5 shrink-0 active:scale-95 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Message Fatima</span>
+</button>
+</div>
+</div>
+<!-- Sticky Bottom Status Note Bar -->
+<div class="sticky bottom-16 inset-x-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-space-sm shadow-[0_-4px_16px_rgba(11,28,48,0.06)] border-t border-surface-container-high/40">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl border border-surface-container-high/60 shadow-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Adviser Note: Supportive Guidance Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">Formal decisions are governed strictly by Taylor's Registry &amp; EMGS.</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    // Highlight 'My Journey' in the App Shell bottom navigation
+    const journeyNav = document.querySelector('nav a[data-path="my-journey"]');
+    if (journeyNav) {
+      document.querySelectorAll('nav a').forEach(el => {
+        el.classList.remove('text-primary', 'font-semibold');
+        el.classList.add('text-on-surface-variant');
+      });
+      journeyNav.classList.remove('text-on-surface-variant');
+      journeyNav.classList.add('text-primary', 'font-semibold');
+    }
+
+    // Toggle filter actions
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+          b.classList.add('text-secondary');
+        });
+        
+        btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-secondary');
+
+        timelineItems.forEach(item => {
+          const status = item.getAttribute('data-status');
+          if (filter === 'all') {
+            item.style.display = 'flex';
+          } else if (filter === 'completed') {
+            item.style.display = status === 'completed' ? 'flex' : 'none';
+          } else if (filter === 'active') {
+            item.style.display = status === 'active' ? 'flex' : 'none';
+          }
+        });
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.04)] border-t border-surface-container-high/60" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a data-path="home" href="../home/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">dashboard</span><span class="font-label-sm text-label-sm leading-none">Home</span></a><a data-path="my-journey" href="../my-journey/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-primary font-semibold"><span class="material-symbols-outlined text-[22px] leading-none mb-1">timeline</span><span class="font-label-sm text-label-sm leading-none">My Journey</span></a><a data-path="documents" href="../documents/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">folder_open</span><span class="font-label-sm text-label-sm leading-none">Documents</span></a><a data-path="messages" href="../messages/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">chat_bubble_outline</span><span class="font-label-sm text-label-sm leading-none">Messages</span></a><a data-path="offer-and-status" href="../offer-status/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">verified</span><span class="font-label-sm text-label-sm leading-none">Offer &amp; Status</span></a>
+<a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 transition-colors mt-3 border border-amber-500/20" href="../../../index.html"><span class="material-symbols-outlined text-amber-700 text-[20px]">home</span><span class="font-label-md text-label-md font-semibold">Exit to Prototype Portal</span></a></div></nav><div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="drawer-overlay"><div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop"></div><div class="fixed inset-y-0 left-0 w-[84%] max-w-[340px] bg-surface flex flex-col shadow-2xl z-10 -translate-x-full transition-transform duration-300 ease-in-out" id="drawer-panel"><div class="p-space-lg pt-safe border-b border-surface-container-high flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-sm">A</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Alamia</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">STUDENT OS</span></div></div><button aria-label="Close Menu" class="w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" id="drawer-close" type="button"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="p-space-md bg-surface-container-low border-b border-surface-container-high flex items-center gap-space-md"><div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shrink-0 shadow-sm">AK</div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Ahmed Khan</span><span class="font-body-sm text-body-sm text-secondary truncate">Bachelor of Software Eng.</span><span class="font-code-sm text-code-sm text-primary font-medium mt-0.5">ID: DEMO-STD-001 • ahmed••••@demo.alamia.edu</span></div></div><div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-1"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider px-space-sm pt-2 pb-1 font-semibold">Dossier &amp; Academics</span><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md">Home / Dashboard</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl bg-primary/10 text-primary font-semibold transition-colors" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">timeline</span><span class="font-label-md text-label-md">Admissions Journey</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-label-md text-label-md">Document Centre</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span><span class="font-label-md text-label-md">Messages &amp; Adviser</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-md text-label-md">Offer &amp; Status</span></a><div class="h-[1px] bg-surface-container-high my-2"></div><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider px-space-sm pt-1 pb-1 font-semibold">Student &amp; Visa Info</span><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span class="font-label-md text-label-md">My Profile &amp; Bio</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">flight</span><span class="font-label-md text-label-md">Visa &amp; EMGS Guidelines</span></a><div class="h-[1px] bg-surface-container-high my-2"></div><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider px-space-sm pt-1 pb-1 font-semibold">University Connect</span><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-md text-label-md">Taylor's University Portal</span></div><span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span></a></div><div class="p-space-md border-t border-surface-container-high bg-surface-container-lowest pb-safe flex items-center justify-between"><span class="font-code-sm text-code-sm text-secondary">DEMO-STD-001 (Demo Case)</span><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">Help Desk</a></div></div></div><script>(function(){const trigger=document.getElementById('drawer-trigger');const overlay=document.getElementById('drawer-overlay');const backdrop=document.getElementById('drawer-backdrop');const panel=document.getElementById('drawer-panel');const closeBtn=document.getElementById('drawer-close');function openDrawer(){overlay.classList.remove('pointer-events-none');backdrop.classList.remove('pointer-events-none','opacity-0');backdrop.classList.add('opacity-100');panel.classList.remove('-translate-x-full');panel.classList.add('translate-x-0');}function closeDrawer(){backdrop.classList.remove('opacity-100');backdrop.classList.add('opacity-0','pointer-events-none');panel.classList.remove('translate-x-0');panel.classList.add('-translate-x-full');setTimeout(function(){overlay.classList.add('pointer-events-none');},300);}if(trigger)trigger.addEventListener('click',openDrawer);if(closeBtn)closeBtn.addEventListener('click',closeDrawer);if(backdrop)backdrop.addEventListener('click',closeDrawer);})();</script>
+</body></html>

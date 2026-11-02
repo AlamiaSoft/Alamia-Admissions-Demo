@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Alamia AdmissionsOS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "outline": "#747686", "on-error-container": "#93000a", "surface-container": "#e5eeff", "secondary": "#565d79", "on-primary": "#ffffff", "on-secondary-container": "#5a627e", "secondary-fixed-dim": "#bec5e5", "primary-fixed-dim": "#b7c4ff", "on-background": "#0b1c30", "surface": "#f8f9ff", "tertiary-fixed": "#6ffbbe", "error": "#ba1a1a", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "on-secondary-fixed": "#131a33", "primary-container": "#1d4ed8", "on-secondary": "#ffffff", "primary-fixed": "#dce1ff", "secondary-container": "#d8deff", "background": "#f8f9ff", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "surface-container-high": "#dce9ff", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "surface-tint": "#2151da", "inverse-primary": "#b7c4ff", "on-tertiary-container": "#60eeb1", "on-primary-fixed-variant": "#0039b5", "on-surface-variant": "#434655", "tertiary": "#004f35", "primary": "#0037b0", "secondary-fixed": "#dbe1ff", "on-primary-container": "#cad3ff", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#3e4660", "on-surface": "#0b1c30", "tertiary-container": "#006a48", "on-primary-fixed": "#001551", "surface-dim": "#cbdbf5", "on-tertiary-fixed": "#002113", "outline-variant": "#c4c5d7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1.5rem", "space-xl": "1.5rem", "gutter-dense": "0.5rem", "gutter": "1rem", "space-lg": "1rem", "margin-compact": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-full"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="Open Menu Drawer" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" id="drawer-open-btn" onclick="openNavDrawer()" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-xs">A</div><div class="flex flex-col"><span class="font-headline-sm text-[16px] text-on-surface font-bold tracking-tight leading-none">Alamia</span><span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider font-semibold leading-none mt-1">Student OS</span></div></div></div><div class="flex items-center gap-1.5"><button aria-label="Contact Adviser" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">headset_mic</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Profile" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 shadow-xs hover:ring-2 hover:ring-primary/20 transition-all" type="button"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Governance Disclaimer & Exemplar Demarcation Banner -->
+<div class="bg-surface-container-high px-space-md py-space-sm">
+<div class="flex items-start gap-space-sm max-w-md mx-auto">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">shield_with_house</span>
+<div class="flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Educational Demonstration Specimen</span>
+<span class="font-code-sm text-code-sm text-secondary bg-surface px-1.5 py-0.5 rounded-lg">#TAY-2027-BSE-COND-DEMO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+          Synthetic walkthrough modeled after Taylor's University standard international conditional offer template. Official offers are issued exclusively via Taylor's Admissions Office upon faculty board ratifications.
+        </p>
+</div>
+</div>
+</div>
+<div class="px-space-md py-space-md space-y-space-md max-w-md mx-auto w-full">
+<!-- Institutional Program Profile Header Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">school</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1 bg-surface-container-low text-secondary px-2 py-0.5 rounded-full mb-1">
+<span class="font-label-sm text-label-sm font-semibold">Taylor's University (Lakeside)</span>
+<span class="material-symbols-outlined text-[13px] text-outline">verified</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+              Bachelor of Software Engineering (Honours)
+            </h1>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Faculty of Innovation &amp; Technology • Subang Jaya, Malaysia</p>
+</div>
+</div>
+</div>
+<!-- Quick Metadata Grid -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">Target Intake</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sep 2027 (Cohort Demo)</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">Published Tuition</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">RM 34,500 / year</span>
+<span class="font-code-sm text-code-sm text-outline block">MYR official fee schedule</span>
+</div>
+</div>
+<!-- Document Watermarked Preview Link & Audit Stamp -->
+<div class="mt-space-md pt-space-xs space-y-2">
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors active:scale-[0.99] text-left" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px]">picture_as_pdf</span>
+<div class="truncate">
+<span class="font-body-md text-body-md text-on-surface font-semibold block truncate">Preview Illustrative Letter (Specimen)</span>
+<span class="font-code-sm text-code-sm text-secondary">PDF Watermarked • 240 KB • Issue Date: 18 Jan 2027</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">open_in_new</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-xs py-1">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">verified_user</span>
+<span class="font-body-sm text-body-sm text-secondary">
+            Adviser Checked: Document structure cross-verified by <strong class="text-on-surface font-medium">Fatima Zahra</strong> on 19 Jan
+          </span>
+</div>
+</div>
+</div>
+<!-- Offer Lifecycle Progress Tracker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Offer Lifecycle State</h2>
+<p class="font-body-sm text-body-sm text-secondary">Multi-tier audit verification flow</p>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-primary font-code-sm text-code-sm font-semibold">Stage 3 of 5</span>
+</div>
+<div class="relative pl-6 space-y-space-md mt-space-md">
+<!-- Connecting Line -->
+<div class="absolute left-2.5 top-2 bottom-3 w-0.5 bg-surface-container"></div>
+<!-- Stage 1 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">1. Issued by Institution</span>
+<span class="font-code-sm text-code-sm text-outline">18 Jan</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Specimen generated under Taylor's reference index</p>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">2. Adviser Verified &amp; Integrity Checked</span>
+<span class="font-code-sm text-code-sm text-outline">19 Jan</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Signed verification by Fatima Zahra (Adviser Desk)</p>
+</div>
+</div>
+<!-- Stage 3 (Current) -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest animate-pulse">
+<span class="material-symbols-outlined text-[13px]">visibility</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-primary font-bold">3. Student Review &amp; Verification</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Reviewing conditional requirements and academic equivalencies</p>
+</div>
+</div>
+<!-- Stage 4 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 w-5 h-5 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px]">hourglass_top</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">4. Conditions Satisfaction</span>
+<span class="font-label-sm text-label-sm text-outline">2 Pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Awaiting transcript attestation &amp; syllabus review</p>
+</div>
+</div>
+<!-- Stage 5 -->
+<div class="relative flex items-start gap-space-sm">
+<div class="absolute -left-6 w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-outline font-medium">5. Formal Acceptance / Response</span>
+<span class="font-label-sm text-label-sm text-outline">Locked</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Secures official seat upon academic condition clearance</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Conditions Clearance Tracker (Exact Institutional Criteria) -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Conditions Clearance</h2>
+<p class="font-body-sm text-body-sm text-secondary">Institutional criteria compliance ledger</p>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container text-secondary px-2 py-0.5 rounded-full font-medium">1 of 3 Cleared</span>
+</div>
+<!-- Condition Card 1: Action Required -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-error mt-1.5 shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Action Required by Student</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">
+                Official IBCC Attestation of HSSC Part-II
+              </h3>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold shrink-0">
+            Pending Scan
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Original verified transcript stamp with official seal QR code required for international equivalency clearance.
+        </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Governance Citation</span>
+<span class="font-code-sm text-code-sm text-secondary">Taylor's Admissions Handbook §3.1 &amp; MQA Standard</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Owner</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Ahmed Khan (Candidate)</span>
+</div>
+</div>
+<div class="pt-1 flex gap-2">
+<a class="flex-1 bg-primary text-on-primary font-body-sm text-body-sm font-semibold py-2 px-3 rounded-lg text-center shadow-xs hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Upload Scan to Document Centre</span>
+</a>
+</div>
+</div>
+<!-- Condition Card 2: Academic Committee Review -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim mt-1.5 shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Faculty Board Review</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">
+                MTH102 Discrete Mathematics Equivalency
+              </h3>
+</div>
+</div>
+<span class="bg-surface-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold shrink-0">
+            In Committee
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Syllabus unit comparison undergoing credit committee verification. Fatima Zahra is monitoring review docket.
+        </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Governance Citation</span>
+<span class="font-code-sm text-code-sm text-secondary">Computing Credit Board Docket #DOC-MTH-014</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Owner</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Fatima Zahra (Adviser Liaison)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-space-xs text-secondary font-body-sm text-body-sm pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+<span>No student action needed. Adviser handling institutional submission.</span>
+</div>
+</div>
+<!-- Condition Card 3: Cleared / Verified -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container mt-1.5 shrink-0"></span>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-wider">Verified Criterion</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-0.5">
+                English Language Proficiency (IELTS Academic)
+              </h3>
+</div>
+</div>
+<span class="bg-surface-container-low text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Cleared</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          IELTS Academic Overall Band 6.5 satisfied (Institutional benchmark: 6.0 with no individual sub-band below 5.5).
+        </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Governance Citation</span>
+<span class="font-code-sm text-code-sm text-secondary">Taylor's Int'l English Standards §2.4 (TRF e-Verify)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Status Audit</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">TRF-2026-PAK-VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Responsible Acceptance Guardrail & Action Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs space-y-space-sm">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-outline text-[20px]">lock</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Formal Acceptance Guardrail</h3>
+</div>
+<!-- Explicit Lock Explainer -->
+<div class="bg-surface-container-low p-space-sm rounded-lg text-secondary">
+<p class="font-body-sm text-body-sm leading-relaxed">
+<strong class="text-on-surface font-medium">Acceptance Locked:</strong> Formal seat reservation and deposit authorization unlock once outstanding conditions are satisfied and reviewed by your adviser. All acceptances are dispatched strictly through Taylor's University International Office portal.
+        </p>
+</div>
+<!-- Disabled Action Button -->
+<div class="space-y-2 pt-1">
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container text-outline font-body-md text-body-md font-semibold cursor-not-allowed flex items-center justify-center gap-2 select-none" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Accept Offer &amp; Commit Seat (Locked)</span>
+</button>
+<!-- Productive Secondary Advisor Contact Options -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="py-2.5 px-3 rounded-xl bg-surface-container-high text-primary hover:bg-surface-variant font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" onclick="openConsultModal()" type="button">
+<span class="material-symbols-outlined text-[17px]">question_answer</span>
+<span class="truncate">Ask Fatima Questions</span>
+</button>
+<button class="py-2.5 px-3 rounded-xl bg-surface-container-high text-primary hover:bg-surface-variant font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5 active:scale-[0.98]" onclick="openWalkthroughModal()" type="button">
+<span class="material-symbols-outlined text-[17px]">calendar_month</span>
+<span class="truncate">Book 10m Walkthrough</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Transparent Governance & Advisory Notice -->
+<div class="p-space-sm rounded-xl bg-surface-container-low text-secondary space-y-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[16px]">info</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Adviser &amp; Visa Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm leading-normal">
+        International Student Pass applications through EMGS Malaysia proceed strictly following unconditional status issuance by Taylor's Admissions Directorate. Alamia provides advisory reconciliation and document staging support without altering official institutional review protocols.
+      </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-code-sm text-code-sm text-outline">Audit Hash: ALM-OFFER-DEMO-2027</span>
+<a class="font-body-sm text-body-sm text-primary font-semibold hover:underline" href="#">View Guidelines</a>
+</div>
+</div>
+</div>
+<!-- Interactive Slide-up Sheet Modal: Ask Fatima -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200 flex items-end sm:items-center justify-center p-0 sm:p-4" id="consultModal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-2xl sm:rounded-2xl p-space-md space-y-space-md shadow-2xl transform translate-y-full transition-transform duration-300">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">FZ</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Message Fatima Zahra</h4>
+<p class="font-body-sm text-body-sm text-secondary">Lead Admissions Adviser • Online</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container" onclick="closeConsultModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold block mb-0.5">Regarding Condition</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">HSSC Attestation or MTH102 Discrete Maths</span>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-secondary uppercase font-semibold block mb-1" for="consultMsg">Your Inquiry</label>
+<textarea class="w-full rounded-lg bg-surface text-on-surface font-body-md text-body-md p-2.5 focus:outline-none focus:ring-2 focus:ring-primary/20" id="consultMsg" placeholder="Hi Fatima, I have received the IBCC verification barcode from the regional board. Could you confirm if this matches the MQA specification?" rows="3"></textarea>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container text-secondary font-body-md text-body-md font-medium" onclick="closeConsultModal()" type="button">Cancel</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-body-md text-body-md font-semibold shadow-xs" onclick="sendInquiry()" type="button">Dispatch to Desk</button>
+</div>
+</div>
+</div>
+<!-- Interactive Slide-up Sheet Modal: Walkthrough Booking -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200 flex items-end sm:items-center justify-center p-0 sm:p-4" id="walkthroughModal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-2xl sm:rounded-2xl p-space-md space-y-space-md shadow-2xl transform translate-y-full transition-transform duration-300">
+<div class="flex items-center justify-between pb-1">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Book 10-Minute Walkthrough</h4>
+<p class="font-body-sm text-body-sm text-secondary">Review conditions &amp; Taylor's fee schedule</p>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container" onclick="closeWalkthroughModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold block">Select Available Demo Slot</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-2.5 rounded-lg bg-surface-container-low text-left hover:bg-surface-container text-on-surface" onclick="selectSlot(this)" type="button">
+<span class="font-body-sm text-body-sm font-semibold block">Tomorrow</span>
+<span class="font-code-sm text-code-sm text-secondary">11:30 AM PKT</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-left hover:bg-surface-container text-on-surface" onclick="selectSlot(this)" type="button">
+<span class="font-body-sm text-body-sm font-semibold block">Thursday</span>
+<span class="font-code-sm text-code-sm text-secondary">03:00 PM PKT</span>
+</button>
+</div>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container text-secondary font-body-md text-body-md font-medium" onclick="closeWalkthroughModal()" type="button">Cancel</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-body-md text-body-md font-semibold shadow-xs" onclick="confirmBooking()" type="button">Confirm Call</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed top-20 inset-x-4 max-w-sm mx-auto z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2" id="toastNotification">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-body-md text-body-md flex-1" id="toastMessage">Inquiry submitted successfully.</span>
+</div>
+</div>
+<script>
+  function openConsultModal() {
+    const modal = document.getElementById('consultModal');
+    if (modal) {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      const inner = modal.querySelector('div');
+      if (inner) inner.classList.remove('translate-y-full');
+    }
+  }
+
+  function closeConsultModal() {
+    const modal = document.getElementById('consultModal');
+    if (modal) {
+      const inner = modal.querySelector('div');
+      if (inner) inner.classList.add('translate-y-full');
+      setTimeout(() => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+      }, 200);
+    }
+  }
+
+  function openWalkthroughModal() {
+    const modal = document.getElementById('walkthroughModal');
+    if (modal) {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      const inner = modal.querySelector('div');
+      if (inner) inner.classList.remove('translate-y-full');
+    }
+  }
+
+  function closeWalkthroughModal() {
+    const modal = document.getElementById('walkthroughModal');
+    if (modal) {
+      const inner = modal.querySelector('div');
+      if (inner) inner.classList.add('translate-y-full');
+      setTimeout(() => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+      }, 200);
+    }
+  }
+
+  function selectSlot(btn) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll('button').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary');
+      b.classList.add('bg-surface-container-low', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+    btn.classList.add('bg-primary-container', 'text-on-primary');
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMessage');
+    if (toast && msgEl) {
+      msgEl.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+      }, 3200);
+    }
+  }
+
+  function sendInquiry() {
+    closeConsultModal();
+    showToast("Inquiry dispatched to Fatima Zahra's desk queue.");
+  }
+
+  function confirmBooking() {
+    closeWalkthroughModal();
+    showToast("Walkthrough session reserved. Calendar invitation sent.");
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a data-path="home" href="../home/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">dashboard</span><span class="font-label-sm text-label-sm leading-none">Home</span></a><a data-path="my-journey" href="../my-journey/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">timeline</span><span class="font-label-sm text-label-sm leading-none">My Journey</span></a><a data-path="documents" href="../documents/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">folder_open</span><span class="font-label-sm text-label-sm leading-none">Documents</span></a><a data-path="messages" href="../messages/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">chat_bubble_outline</span><span class="font-label-sm text-label-sm leading-none">Messages</span></a><a data-path="offer-and-status" href="../offer-status/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-primary font-semibold"><span class="material-symbols-outlined text-[22px] leading-none mb-1">verified</span><span class="font-label-sm text-label-sm leading-none">Offer &amp; Status</span></a>
+<a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 transition-colors mt-3 border border-amber-500/20" href="../../../index.html"><span class="material-symbols-outlined text-amber-700 text-[20px]">home</span><span class="font-label-md text-label-md font-semibold">Exit to Prototype Portal</span></a></div></nav>
+<!-- Slide-over Drawer Menu Overlay -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer-backdrop" onclick="closeNavDrawer()"></div>
+<aside class="fixed inset-y-0 left-0 z-50 w-[84%] max-w-[320px] bg-surface-container-lowest shadow-2xl flex flex-col -translate-x-full transition-transform duration-300 ease-out select-none overflow-hidden" id="nav-drawer">
+<!-- Drawer Header / User Banner -->
+<div class="p-space-lg bg-surface-container-low border-b border-surface-container flex flex-col gap-space-md pt-safe">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm font-semibold shadow-xs">
+        AK
+      </div>
+<button aria-label="Close Drawer" class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="closeNavDrawer()" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ahmed Khan</h3>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<p class="font-code-sm text-code-sm text-outline">DEMO-STD-001 • ahmed••••@demo.alamia.edu</p>
+<div class="inline-flex items-center gap-1.5 mt-2 px-2 py-0.5 rounded-full bg-surface-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="">Conditional Offer Confirmed</span>
+</div>
+</div>
+</div>
+<!-- Navigation Link Sections -->
+<div class="flex-1 overflow-y-auto p-space-sm space-y-1">
+<div class="px-3 py-1 font-label-sm text-label-sm text-secondary uppercase tracking-wider">Navigation</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">dashboard</span>
+<span class="font-body-md text-body-md font-medium flex-1">Home / Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">timeline</span>
+<span class="font-body-md text-body-md font-medium flex-1">Admissions Journey</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">folder_open</span>
+<span class="font-body-md text-body-md font-medium flex-1">Document Centre</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-code-sm text-code-sm font-semibold">1 Action</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">chat_bubble_outline</span>
+<span class="font-body-md text-body-md font-medium flex-1">Messages &amp; Adviser</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-primary bg-surface-container-low font-semibold transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+<span class="font-body-md text-body-md flex-1">Offer &amp; Status</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">account_circle</span>
+<span class="font-body-md text-body-md font-medium flex-1">My Profile &amp; Bio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">flight_takeoff</span>
+<span class="font-body-md text-body-md font-medium flex-1">Visa &amp; EMGS Guidelines</span>
+</a>
+<div class="my-2 border-t border-surface-container"></div>
+<div class="px-3 py-1 font-label-sm text-label-sm text-secondary uppercase tracking-wider">Institutional Portals</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
+<span class="material-symbols-outlined text-[20px] text-secondary">school</span>
+<span class="font-body-md text-body-md font-medium flex-1">Taylor's University Portal</span>
+<span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span>
+</a>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-md border-t border-surface-container bg-surface-container-low/50 pb-safe">
+<div class="flex items-center justify-between text-secondary font-code-sm text-code-sm">
+<span class="">Alamia AdmissionsOS</span>
+<span class="">v2.4.1</span>
+</div>
+</div>
+</aside>
+<script>
+  function openNavDrawer() {
+    const backdrop = document.getElementById('nav-drawer-backdrop');
+    const drawer = document.getElementById('nav-drawer');
+    if (backdrop && drawer) {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      drawer.classList.remove('-translate-x-full');
+      drawer.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeNavDrawer() {
+    const backdrop = document.getElementById('nav-drawer-backdrop');
+    const drawer = document.getElementById('nav-drawer');
+    if (backdrop && drawer) {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      drawer.classList.remove('translate-x-0');
+      drawer.classList.add('-translate-x-full');
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+</body></html>

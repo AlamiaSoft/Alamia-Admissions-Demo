@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Alamia AdmissionsOS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "outline": "#747686", "on-error-container": "#93000a", "surface-container": "#e5eeff", "secondary": "#565d79", "on-primary": "#ffffff", "on-secondary-container": "#5a627e", "secondary-fixed-dim": "#bec5e5", "primary-fixed-dim": "#b7c4ff", "on-background": "#0b1c30", "surface": "#f8f9ff", "tertiary-fixed": "#6ffbbe", "error": "#ba1a1a", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "on-secondary-fixed": "#131a33", "primary-container": "#1d4ed8", "on-secondary": "#ffffff", "primary-fixed": "#dce1ff", "secondary-container": "#d8deff", "background": "#f8f9ff", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "surface-container-high": "#dce9ff", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "surface-tint": "#2151da", "inverse-primary": "#b7c4ff", "on-tertiary-container": "#60eeb1", "on-primary-fixed-variant": "#0039b5", "on-surface-variant": "#434655", "tertiary": "#004f35", "primary": "#0037b0", "secondary-fixed": "#dbe1ff", "on-primary-container": "#cad3ff", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#3e4660", "on-surface": "#0b1c30", "tertiary-container": "#006a48", "on-primary-fixed": "#001551", "surface-dim": "#cbdbf5", "on-tertiary-fixed": "#002113", "outline-variant": "#c4c5d7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.75rem", "space-sm": "0.5rem", "margin": "1.5rem", "space-xl": "1.5rem", "gutter-dense": "0.5rem", "gutter": "1rem", "space-lg": "1rem", "margin-compact": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-full"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60 pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Open Navigation Menu" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" id="menuOpenBtn" onclick="toggleNavDrawer(true)" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-sm">A</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Alamia</span><span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider leading-none mt-0.5 font-semibold">STUDENT OS</span></div></div></div><div class="flex items-center gap-1"><button aria-label="Contact Adviser" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" onclick="notifyAdvisor()" type="button"><span class="material-symbols-outlined text-[22px]">support_agent</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Profile" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 text-on-primary shadow-sm hover:ring-2 hover:ring-primary/20 transition-all" onclick="toggleNavDrawer(true)" type="button"><span class="material-symbols-outlined text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Pinned Adviser Context Bar -->
+<div class="sticky top-0 z-20 bg-surface/95 backdrop-blur-md px-4 py-2.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="relative flex-shrink-0">
+<div class="w-11 h-11 rounded-full bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Fatima Zahra, a warm, professional senior admissions adviser in professional modest attire with glasses, smiling supportively in front of a modern campus office with natural daylight, subtle blue and slate tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdBlBQyQfyMKKItLaNoSIGttCQf2zstKqeEZseU_sDSjxuWL0HFxVid3hYcnT7yGOqOt-OslAi03n1cVHnRbAE76mrpQNqy3CKdXbjy6PuufvzaOHfDqNgcUfCFiu9-QmKOq85n99lniJfMJ5EwNhAKHb44As7bAAIm-9jcW76uzgLyCP0A6mSoESOSmrCJQ3Bwll3j_zTWstFP9Bu8N8xw6fl8UrWpjSeRTaSEf0"/>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Fatima Zahra</h2>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px]">Malaysia Desk</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+            Senior Adviser • ~15m response (9am–6pm MYT)
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="showScheduleCallModal()" title="Schedule Brief Call" type="button">
+<span class="material-symbols-outlined text-[19px]">schedule</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="toggleCaseOverviewSheet()" title="Application Context Summary" type="button">
+<span class="material-symbols-outlined text-[19px]">info</span>
+</button>
+</div>
+</div>
+<!-- Transparent Institutional Reality Banner -->
+<div class="mt-2 px-3 py-1.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0">school</span>
+<p class="font-label-sm text-[11px] text-secondary truncate">
+        Taylor’s University Lakeside • Software Eng (Hons) • Fall ’27 Demo Cycle
+      </p>
+</div>
+</div>
+<!-- Chat Stream Container -->
+<div class="flex flex-col px-4 pt-4 pb-36 space-y-4" id="chatMessageStream">
+<!-- Date Divider: 10 Jan -->
+<div class="flex items-center justify-center my-1">
+<span class="px-3 py-0.5 rounded-full bg-surface-container text-secondary font-code-sm text-[10px] tracking-wide uppercase">
+        10 Jan 2027
+      </span>
+</div>
+<!-- System Event: Document Packet Submission -->
+<div class="mx-auto w-full max-w-sm rounded-xl bg-surface-container-low p-3 shadow-sm flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary">System Event • Dossier Packet Logged</span>
+<span class="font-code-sm text-[10px] text-secondary">2:15 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Initial academic packet received from Ahmed Khan: High School Certificate (HSSC), English Test Result (IELTS 6.5), and preliminary syllabi.
+        </p>
+</div>
+</div>
+<!-- Date Divider: 15 Jan -->
+<div class="flex items-center justify-center my-1">
+<span class="px-3 py-0.5 rounded-full bg-surface-container text-secondary font-code-sm text-[10px] tracking-wide uppercase">
+        15 Jan 2027
+      </span>
+</div>
+<!-- System Event: English Verification Completed -->
+<div class="mx-auto w-full max-w-sm rounded-xl bg-surface-container-low p-3 shadow-sm flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">System Notice • English Criterion Cleared</span>
+<span class="font-code-sm text-[10px] text-secondary">9:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          IELTS Academic TRF score of 6.5 confirmed against Taylor’s direct entry criteria (minimum 6.0 met).
+        </p>
+</div>
+</div>
+<!-- Date Divider: Today -->
+<div class="flex items-center justify-center my-2">
+<span class="px-3 py-0.5 rounded-full bg-primary-fixed text-primary font-code-sm text-[10px] tracking-wide uppercase font-semibold">
+        Today • 19 Jan 2027
+      </span>
+</div>
+<!-- Adviser Message: The IBCC Explanation -->
+<div class="flex items-start gap-2.5 max-w-[92%] sm:max-w-[85%] self-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center flex-shrink-0 mt-1">
+<img class="w-full h-full object-cover" data-alt="Avatar thumbnail of Fatima Zahra smiling professionally, warm framing, modest smart attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrNvoMxRVnadyGr2LZgCvyfvV9gYLZlCXtCum7ZxWoyuypmEibKFWrSBrIxLCmJU_6kcOuWhyTM7UI7YdaWPsP4UcYq87NzxIyMLNuAmcu2pjI-6nW7ijEA9GUAG54jSRjwB3kcV07Rk1J1Vczz4VSYYoSGLknK4N74cLecpUpuRLg2za6Z6JplGTPrxJPtvwJCBo3H_2uXxWkTiry99Ys_8qYDEb9MGDR8O-5mJ0"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Fatima Zahra</span>
+<span class="font-code-sm text-[10px] text-secondary">10:18 AM</span>
+</div>
+<div class="p-3.5 rounded-2xl rounded-tl-sm bg-surface-container-lowest text-on-surface shadow-sm space-y-2">
+<p class="font-body-md text-body-md leading-relaxed">
+            Salam Ahmed! Just a quick update on your files. The admissions registry at Taylor’s needs to see the embossed IBCC attestation stamp on the back of your HSSC Part-II marks sheet clearly.
+          </p>
+<p class="font-body-md text-body-md leading-relaxed">
+            The previous scan uploaded on 10 Jan had the bottom-right corner cropped where the seal sits. If you can snap a fresh, flat photo in bright lighting showing both sides, I’ll review it directly and re-attach it to your faculty dossier.
+          </p>
+</div>
+<!-- In-Chat Actionable Document Card -->
+<div class="mt-2 rounded-2xl bg-surface-container-lowest p-3.5 shadow-md">
+<div class="flex items-center justify-between gap-2 pb-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-error text-[20px] flex-shrink-0">warning</span>
+<span class="font-headline-sm text-[13px] text-on-surface truncate">HSSC Part-II Marks Sheet</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] whitespace-nowrap flex-shrink-0">
+              Needs Replacement • 48h
+            </span>
+</div>
+<!-- Document Preview Mockup -->
+<div class="relative w-full h-24 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center mb-2.5">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up scan preview of high school board marksheet showing partial stamp on paper with cropped edge, labeled for replacement review, flat layout on desk lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYrARjzmkyjMlCDfJkY4v3w3pluFXrh0UlipYSotyjaPWGy3NMie2e_O_yk2UZIdC-7lNLDgd-AnbvASGlvvBVGzdZeFHHfQt60CbU6Lyw4dxxx6qFCqAby8o3rt9zKwE57efjp4ih8lTi7xxw3MgsbDxwWCGDgVyrH4GywEjuxxXpG8yT7222UbeioDMFgGea1rRchiNZzdOZMW8rJmsFqSBsVNFVcfyAZ0xtIlU"/>
+<div class="absolute inset-0 bg-inverse-surface/30 backdrop-blur-[1px] flex items-center justify-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+<span class="font-label-sm text-label-sm">Reverse IBCC Stamp Incomplete</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-3 leading-snug">
+            Please capture both the front page and the back IBCC verification stamp in one 2-page PDF or 2 clear photos.
+          </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 px-3 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform" onclick="triggerDocumentUpload()" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+              Upload New Scan
+            </button>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" onclick="openRequirementsGuide()" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              View Guide
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Student Response: Ahmed Khan -->
+<div class="flex items-start gap-2 max-w-[88%] sm:max-w-[78%] self-end flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-[12px] flex-shrink-0 mt-1 shadow-sm">
+        AK
+      </div>
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-code-sm text-[10px] text-secondary">10:20 AM</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Ahmed Khan</span>
+</div>
+<div class="p-3.5 rounded-2xl rounded-tr-sm bg-primary text-on-primary shadow-sm space-y-1">
+<p class="font-body-md text-body-md leading-relaxed">
+            Thanks Fatima! I will scan both sides with the full IBCC stamp clearly visible today after college. I’ll make sure sunlight is clear on the paper.
+          </p>
+</div>
+<div class="flex items-center gap-1 mt-1 pr-1">
+<span class="font-code-sm text-[10px] text-secondary">Delivered</span>
+<span class="material-symbols-outlined text-primary text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- Adviser Reassurance: Discrete Math Syllabus & Review Pipeline -->
+<div class="flex items-start gap-2.5 max-w-[92%] sm:max-w-[85%] self-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center flex-shrink-0 mt-1">
+<img class="w-full h-full object-cover" data-alt="Avatar thumbnail of Fatima Zahra smiling professionally, modest modern attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6-Ih4_h-WCOJNSCP4BidYp4zhyLK1nGT3ZL1G9uupVc_IBbeaifXegq8kXj-_85QiXCM2EY3RnJM2HW_0PqXHoGp2TJkB4SfETF9S3kPZCtpdyl2WVvSytWpaptQk4OoaYFhBK6QzKI8BVrj-JBf9xRJStPEDpcWVe5vSLJjuuv7TJC3_EGmGDWlr_XXpiMinmraaCPKEAqlkln1RleeguoSTSX_01eMGvQxq4-A"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Fatima Zahra</span>
+<span class="font-code-sm text-[10px] text-secondary">10:22 AM</span>
+</div>
+<div class="p-3.5 rounded-2xl rounded-tl-sm bg-surface-container-lowest text-on-surface shadow-sm space-y-2">
+<p class="font-body-md text-body-md leading-relaxed">
+            Sounds perfect, take your time today!
+          </p>
+<p class="font-body-md text-body-md leading-relaxed">
+            In the meantime, don’t worry about the Discrete Mathematics syllabus check (MTH102 credit exemption). I am liaising with the Taylor’s School of Computing desk directly on your behalf to match the learning outcomes.
+          </p>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0 mt-0.5">assignment_turned_in</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Status Note: No action needed from you</span>
+<p class="font-body-sm text-[11px] text-secondary mt-0.5">
+                The admissions committee typically takes 7–10 working days for faculty review. We’ll notify you immediately when they provide formal feedback.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- System Event: Live Chat Handshake Confirmation -->
+<div class="mx-auto w-full max-w-sm rounded-xl bg-surface-container-low p-2.5 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-[11px] text-secondary">Direct Channel Active • Fatima Zahra • 9:00 - 18:00 MYT</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+</div>
+</div>
+<!-- Floating Bottom Section (Quick Replies + Input Composer) -->
+<div class="fixed bottom-16 inset-x-0 z-30 bg-surface/95 backdrop-blur-xl px-3 pt-2 pb-2">
+<!-- Contextual Quick Reply Action Chips (Horizontally Scrollable) -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2 px-1">
+<button class="flex-shrink-0 h-8 px-3 rounded-full bg-surface-container-lowest text-primary text-label-sm font-label-sm shadow-sm hover:bg-surface-container transition-colors flex items-center gap-1.5 active:scale-95" onclick="sendQuickReply('📄 Uploading marks sheet now')" type="button">
+<span>📄 Uploading marks sheet now</span>
+</button>
+<button class="flex-shrink-0 h-8 px-3 rounded-full bg-surface-container-lowest text-on-surface text-label-sm font-label-sm shadow-sm hover:bg-surface-container transition-colors flex items-center gap-1.5 active:scale-95" onclick="sendQuickReply('❓ Do I need both sides scanned?')" type="button">
+<span>❓ Do I need both sides?</span>
+</button>
+<button class="flex-shrink-0 h-8 px-3 rounded-full bg-surface-container-lowest text-on-surface text-label-sm font-label-sm shadow-sm hover:bg-surface-container transition-colors flex items-center gap-1.5 active:scale-95" onclick="showScheduleCallModal()" type="button">
+<span>📞 Request 10m call</span>
+</button>
+<button class="flex-shrink-0 h-8 px-3 rounded-full bg-surface-container-lowest text-on-surface text-label-sm font-label-sm shadow-sm hover:bg-surface-container transition-colors flex items-center gap-1.5 active:scale-95" onclick="sendQuickReply('🏫 Question about Taylor\'s Campus accommodation')" type="button">
+<span>🏫 Question on Taylor’s</span>
+</button>
+</div>
+<!-- Active Input Bar -->
+<div class="flex items-center gap-2 bg-surface-container-lowest p-1.5 pl-3 rounded-2xl shadow-sm">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="triggerDocumentUpload()" title="Attach file" type="button">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container transition-colors" onclick="triggerCameraCapture()" title="Scan Document" type="button">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</button>
+<input class="flex-1 min-w-0 bg-transparent py-1.5 text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" id="chatInputField" onkeydown="handleInputKey(event)" placeholder="Message Fatima..." type="text"/>
+<button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform flex-shrink-0" id="chatSendButton" onclick="sendCustomMessage()" title="Send Message" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<!-- Honest Governance Micro-caption -->
+<div class="mt-1 px-2 flex items-center justify-center">
+<p class="font-code-sm text-[10px] text-secondary text-center truncate">
+        Guidance provided for application readiness. Formal decisions issued by Taylor’s Admissions.
+      </p>
+</div>
+</div>
+<!-- Slide-up Modal: Dossier Context Summary -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="caseOverviewSheet">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none" id="caseOverviewBackdrop" onclick="toggleCaseOverviewSheet(false)"></div>
+<div class="absolute bottom-0 inset-x-0 max-h-[751px] bg-surface-container-lowest rounded-t-3xl shadow-2xl p-5 transform translate-y-full transition-transform duration-300 flex flex-col pointer-events-auto overflow-hidden" id="caseOverviewPanel">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high mx-auto mb-3"></div>
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Application Dossier Context</h3>
+<p class="font-body-sm text-body-sm text-secondary">Verified records for Ahmed Khan (ID: DEMO-STD-001)</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface" onclick="toggleCaseOverviewSheet(false)" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="overflow-y-auto space-y-3 pr-1">
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary">Program &amp; Institution</span>
+<p class="font-headline-sm text-[14px] text-on-surface">Bachelor of Software Engineering (Honours)</p>
+<p class="font-body-sm text-[12px] text-primary">Taylor’s University Lakeside Campus (Subang Jaya)</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-[10px]">Under Review</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-3 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-secondary">English Proficiency</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">IELTS 6.5</span>
+</div>
+<p class="font-code-sm text-[10px] text-tertiary mt-0.5">Satisfies direct entry requirement</p>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-secondary">Credit Exemption</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Discrete Math</span>
+</div>
+<p class="font-code-sm text-[10px] text-secondary mt-0.5">Faculty syllabus matching</p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-error-container/40 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px] flex-shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Action Item: HSSC Stamp Scan</span>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+              Original scan submitted Jan 10 had IBCC attestation seal cropped. Replacement requested within 48h to maintain current committee review window.
+            </p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex gap-2">
+<button class="flex-1 h-10 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-1 shadow-sm" onclick="toggleCaseOverviewSheet(false); triggerDocumentUpload();" type="button">
+          Upload Stamp Scan
+        </button>
+<button class="px-4 h-10 rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm" onclick="toggleCaseOverviewSheet(false)" type="button">
+          Close
+        </button>
+</div>
+</div>
+</div>
+<!-- Slide-up Modal: IBCC Scan Requirements Guide -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="requirementsModal">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none" id="requirementsBackdrop" onclick="closeRequirementsGuide()"></div>
+<div class="absolute bottom-0 inset-x-0 max-h-[707px] bg-surface-container-lowest rounded-t-3xl shadow-2xl p-5 transform translate-y-full transition-transform duration-300 flex flex-col pointer-events-auto overflow-hidden" id="requirementsPanel">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high mx-auto mb-3"></div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">document_scanner</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">IBCC Stamp Requirements</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary" onclick="closeRequirementsGuide()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="overflow-y-auto space-y-3 pr-1 text-on-surface">
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center flex-shrink-0">1</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Capture Reverse (Back) Side</h4>
+<p class="font-body-sm text-body-sm text-secondary">The Inter Board Committee of Chairmen (IBCC) official colored QR sticker and stamp is placed on the back of the certificate.</p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center flex-shrink-0">2</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Avoid Corner Cropping</h4>
+<p class="font-body-sm text-body-sm text-secondary">Ensure all four edges of the physical paper are visible inside the image frame with no fingers or shadows over the seal.</p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center flex-shrink-0">3</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Format: Multi-page PDF or 2 High-Res JPGs</h4>
+<p class="font-body-sm text-body-sm text-secondary">Fatima will merge and inspect the resolution prior to placing it in the Taylor’s evaluation queue.</p>
+</div>
+</div>
+</div>
+<button class="mt-4 w-full h-11 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-2 shadow-sm" onclick="closeRequirementsGuide(); triggerDocumentUpload();" type="button">
+<span class="material-symbols-outlined text-[18px]">file_upload</span>
+        I have my document ready • Upload now
+      </button>
+</div>
+</div>
+<!-- Interactive Hidden File Input -->
+<input accept=".pdf,image/png,image/jpeg" class="hidden" id="chatHiddenFileInput" onchange="handleFileChosen(event)" type="file"/>
+<!-- Toast Notification Container -->
+<div class="fixed top-20 inset-x-4 z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex justify-center" id="actionToast">
+<div class="px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toastMessage">Action completed</span>
+</div>
+</div>
+<script>
+    // Ensure Messages tab is highlighted on load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof navigateToTab === 'function') {
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-path') === 'messages') {
+            link.classList.remove('text-on-surface-variant');
+            link.classList.add('text-primary', 'font-semibold');
+          } else {
+            link.classList.remove('text-primary', 'font-semibold');
+            link.classList.add('text-on-surface-variant');
+          }
+        });
+      }
+    });
+
+    // Toast utility
+    function notify(message, icon = 'check_circle') {
+      const toast = document.getElementById('actionToast');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+      
+      toastMessage.textContent = message;
+      toastIcon.textContent = icon;
+      
+      toast.classList.remove('-translate-y-12', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.add('-translate-y-12', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    // Modal Sheet Handlers
+    function toggleCaseOverviewSheet(show = true) {
+      const container = document.getElementById('caseOverviewSheet');
+      const backdrop = document.getElementById('caseOverviewBackdrop');
+      const panel = document.getElementById('caseOverviewPanel');
+
+      if (show) {
+        container.classList.remove('pointer-events-none');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100', 'pointer-events-auto');
+        panel.classList.remove('translate-y-full');
+        panel.classList.add('translate-y-0');
+      } else {
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        panel.classList.remove('translate-y-0');
+        panel.classList.add('translate-y-full');
+        setTimeout(() => {
+          container.classList.add('pointer-events-none');
+        }, 300);
+      }
+    }
+
+    function openRequirementsGuide() {
+      const container = document.getElementById('requirementsModal');
+      const backdrop = document.getElementById('requirementsBackdrop');
+      const panel = document.getElementById('requirementsPanel');
+
+      container.classList.remove('pointer-events-none');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-y-full');
+      panel.classList.add('translate-y-0');
+    }
+
+    function closeRequirementsGuide() {
+      const container = document.getElementById('requirementsModal');
+      const backdrop = document.getElementById('requirementsBackdrop');
+      const panel = document.getElementById('requirementsPanel');
+
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-y-0');
+      panel.classList.add('translate-y-full');
+      setTimeout(() => {
+        container.classList.add('pointer-events-none');
+      }, 300);
+    }
+
+    function showScheduleCallModal() {
+      notify('Adviser Fatima is available today at 4:30 PM MYT for a 10m briefing.', 'calendar_month');
+    }
+
+    // Interactive message posting
+    function appendStudentMessage(text) {
+      const stream = document.getElementById('chatMessageStream');
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start gap-2 max-w-[88%] sm:max-w-[78%] self-end flex-row-reverse animate-fade-in';
+      msgDiv.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-[12px] flex-shrink-0 mt-1 shadow-sm">
+          AK
+        </div>
+        <div class="flex flex-col items-end">
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="font-code-sm text-[10px] text-secondary">${timeStr}</span>
+            <span class="font-label-sm text-label-sm text-on-surface font-semibold">Ahmed Khan</span>
+          </div>
+          <div class="p-3.5 rounded-2xl rounded-tr-sm bg-primary text-on-primary shadow-sm space-y-1">
+            <p class="font-body-md text-body-md leading-relaxed">${text}</p>
+          </div>
+          <div class="flex items-center gap-1 mt-1 pr-1">
+            <span class="font-code-sm text-[10px] text-secondary">Sent</span>
+            <span class="material-symbols-outlined text-primary text-[14px]">done</span>
+          </div>
+        </div>
+      `;
+      stream.appendChild(msgDiv);
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+      // Simulated auto-acknowledgement from adviser Fatima after 2 seconds
+      setTimeout(() => {
+        const replyDiv = document.createElement('div');
+        replyDiv.className = 'flex items-start gap-2.5 max-w-[92%] sm:max-w-[85%] self-start';
+        replyDiv.innerHTML = `
+          <div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden shadow-inner flex items-center justify-center flex-shrink-0 mt-1">
+            <img src="placeholder" data-alt="Avatar thumbnail of Fatima Zahra smiling warmly." class="w-full h-full object-cover"/>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-baseline gap-2 mb-1">
+              <span class="font-label-sm text-label-sm text-on-surface font-semibold">Fatima Zahra</span>
+              <span class="font-code-sm text-[10px] text-secondary">Just now</span>
+            </div>
+            <div class="p-3.5 rounded-2xl rounded-tl-sm bg-surface-container-lowest text-on-surface shadow-sm">
+              <p class="font-body-md text-body-md leading-relaxed">
+                Understood Ahmed! I have flagged this on my desk. Ping me as soon as you upload the file.
+              </p>
+            </div>
+          </div>
+        `;
+        stream.appendChild(replyDiv);
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }, 1600);
+    }
+
+    function sendCustomMessage() {
+      const input = document.getElementById('chatInputField');
+      const val = input.value.trim();
+      if (!val) return;
+      appendStudentMessage(val);
+      input.value = '';
+    }
+
+    function handleInputKey(e) {
+      if (e.key === 'Enter') {
+        sendCustomMessage();
+      }
+    }
+
+    function sendQuickReply(text) {
+      appendStudentMessage(text);
+    }
+
+    function triggerDocumentUpload() {
+      document.getElementById('chatHiddenFileInput').click();
+    }
+
+    function triggerCameraCapture() {
+      notify('Launching scanner mode with edge detection...', 'photo_camera');
+      setTimeout(() => {
+        appendStudentMessage('📷 Captured: HSSC_Part2_Stamp_Scanned.pdf (Front & IBCC Reverse Seal)');
+        notify('Scan uploaded and linked to Document Centre!', 'check_circle');
+      }, 1400);
+    }
+
+    function handleFileChosen(e) {
+      if (e.target.files.length > 0) {
+        const file = e.target.files[0];
+        appendStudentMessage(`📎 Attached: ${file.name} (Uploaded for Adviser Review)`);
+        notify(`File ${file.name} received. Placed in Fatima's priority review queue.`, 'check_circle');
+      }
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a data-path="home" href="../home/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">dashboard</span><span class="font-label-sm text-label-sm leading-none">Home</span></a><a data-path="my-journey" href="../my-journey/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">timeline</span><span class="font-label-sm text-label-sm leading-none">My Journey</span></a><a data-path="documents" href="../documents/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">folder_open</span><span class="font-label-sm text-label-sm leading-none">Documents</span></a><a data-path="messages" href="../messages/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-primary font-semibold"><span class="material-symbols-outlined text-[22px] leading-none mb-1">chat_bubble_outline</span><span class="font-label-sm text-label-sm leading-none">Messages</span></a><a data-path="offer-and-status" href="../offer-status/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">verified</span><span class="font-label-sm text-label-sm leading-none">Offer &amp; Status</span></a>
+<a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 transition-colors mt-3 border border-amber-500/20" href="../../../index.html"><span class="material-symbols-outlined text-amber-700 text-[20px]">home</span><span class="font-label-md text-label-md font-semibold">Exit to Prototype Portal</span></a></div></nav>
+<!-- Standardized Off-canvas Drawer Menu -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="navDrawerContainer"><div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none" id="navDrawerBackdrop" onclick="toggleNavDrawer(false)"></div><aside class="absolute top-0 bottom-0 left-0 w-[84%] max-w-[340px] bg-surface-container-lowest shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col h-full pointer-events-auto overflow-hidden" id="navDrawerPanel"><div class="p-space-md bg-surface-container-low flex items-center justify-between border-b border-surface-container-high"><div class="flex items-center gap-space-sm min-w-0"><div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm flex-shrink-0 ring-2 ring-primary-fixed">AK</div><div class="min-w-0 flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Ahmed Khan</span><span class="font-label-sm text-label-sm text-secondary truncate">BSc Computer Science '28</span><span class="font-code-sm text-code-sm text-primary mt-0.5">Badge: DEMO-STD-001 • ahmed••••@demo.alamia.edu</span></div></div><button aria-label="Close Menu" class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" id="menuCloseBtn" onclick="toggleNavDrawer(false)" type="button"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="flex-1 overflow-y-auto no-scrollbar py-space-sm px-space-xs space-y-1"><div class="px-3 py-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Portal Sections</span></div><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); navigateToTab('home');"><span class="material-symbols-outlined text-[20px] text-secondary">dashboard</span><span class="font-body-md text-body-md font-medium">Home / Dashboard</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); navigateToTab('my-journey');"><span class="material-symbols-outlined text-[20px] text-secondary">timeline</span><span class="font-body-md text-body-md font-medium">Admissions Journey</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg bg-primary-fixed/40 text-primary font-semibold transition-colors" href="#" onclick="toggleNavDrawer(false); navigateToTab('documents');"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">folder_open</span><span class="font-body-md text-body-md">Document Centre</span></div><span class="w-2 h-2 rounded-full bg-error"></span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); navigateToTab('messages');"><span class="material-symbols-outlined text-[20px] text-secondary">chat_bubble_outline</span><span class="font-body-md text-body-md font-medium">Messages &amp; Adviser</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); navigateToTab('offer-and-status');"><span class="material-symbols-outlined text-[20px] text-secondary">verified</span><span class="font-body-md text-body-md font-medium">Offer &amp; Status</span></a><div class="my-2 border-t border-surface-container"></div><div class="px-3 py-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Dossier &amp; External</span></div><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); showToast('Opening Ahmed Khan Profile...', 'person');"><span class="material-symbols-outlined text-[20px] text-secondary">person</span><span class="font-body-md text-body-md font-medium">My Profile &amp; Bio</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); showToast('Opening Visa &amp; EMGS guidelines...', 'verified_user');"><span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span><span class="font-body-md text-body-md font-medium">Visa &amp; EMGS Guidelines</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); showToast('Connecting to Taylor\'s University Portal...', 'open_in_new');"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">open_in_new</span><span class="font-body-md text-body-md font-medium">Taylor's University Portal</span></div></a><div class="my-2 border-t border-surface-container"></div><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); notifyAdvisor();"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span><span class="font-body-md text-body-md font-medium">Contact Adviser Fatima</span></div><span class="font-code-sm text-code-sm text-tertiary-container font-semibold">Online</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container transition-colors" href="#" onclick="toggleNavDrawer(false); showToast('Opening Settings...', 'settings');"><span class="material-symbols-outlined text-[20px] text-secondary">settings</span><span class="font-body-md text-body-md font-medium">Settings &amp; Language</span></a></div><div class="p-space-md border-t border-surface-container bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Alamia Student OS</span><span class="font-code-sm text-code-sm text-secondary">v2.4.1 (Build 8802)</span></div><button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary hover:text-error font-label-sm text-label-sm transition-colors" onclick="toggleNavDrawer(false); showToast('Session locked', 'lock');" type="button">Lock</button></div></aside></div><script>
+  // Drawer toggling logic
+  function toggleNavDrawer(isOpen) {
+    const container = document.getElementById('navDrawerContainer');
+    const backdrop = document.getElementById('navDrawerBackdrop');
+    const panel = document.getElementById('navDrawerPanel');
+    if (isOpen) {
+      container.classList.remove('pointer-events-none');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('-translate-x-full');
+      panel.classList.add('translate-x-0');
+    } else {
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('-translate-x-full');
+      setTimeout(() => {
+        container.classList.add('pointer-events-none');
+      }, 300);
+    }
+  }
+
+  // Ensure bottom tab 'Documents' is set to active style per instructions
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'documents') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-semibold');
+      } else {
+        link.classList.remove('text-primary', 'font-semibold');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+  });
+
+  function navigateToTab(tabPath) {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === tabPath) {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-semibold');
+      } else {
+        link.classList.remove('text-primary', 'font-semibold');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+    if (tabPath === 'documents') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      showToast(`Navigating to ${tabPath.replace('-', ' ').toUpperCase()}...`, 'navigation');
+    }
+  }
+
+  // Accordion drawer toggle
+  function toggleDetails(headerElement) {
+    const parentCard = headerElement.closest('.doc-card');
+    const details = parentCard.querySelector('.doc-details');
+    const chevron = headerElement.querySelector('.chevron-icon');
+    
+    if (details.classList.contains('hidden')) {
+      details.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      details.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
+  // Toast notifier
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('actionToast');
+    const toastMessage = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+    
+    toastMessage.textContent = message;
+    toastIcon.textContent = icon;
+    
+    toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+
+  function downloadDoc(name) {
+    showToast(`Downloading verified copy of ${name}...`, 'cloud_download');
+  }
+
+  function previewDoc(name) {
+    showToast(`Opening high-res dossier viewer for ${name}...`, 'preview');
+  }
+
+  function notifyAdvisor() {
+    showToast(`Redirecting message thread to Fatima Zahra...`, 'chat');
+  }
+
+  // Simulate file upload replacement
+  const fileUploadInput = document.getElementById('fileUploadInput');
+  const uploadFeedbackBar = document.getElementById('uploadFeedbackBar');
+  const cameraScanBtn = document.getElementById('cameraScanBtn');
+
+  function simulateUpload(filename) {
+    uploadFeedbackBar.classList.remove('hidden');
+    uploadFeedbackBar.querySelector('.font-label-sm').textContent = `Uploading ${filename}...`;
+    
+    setTimeout(() => {
+      uploadFeedbackBar.classList.add('hidden');
+      showToast('Document uploaded. Placed in Adviser Priority Queue.', 'done_all');
+    }, 2000);
+  }
+
+  if (fileUploadInput) {
+    fileUploadInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        simulateUpload(e.target.files[0].name);
+      }
+    });
+  }
+
+  if (cameraScanBtn) {
+    cameraScanBtn.addEventListener('click', () => {
+      simulateUpload('CameraScan_HSSC_Attested.jpg');
+    });
+  }
+
+  // Filter Bar Tabs Logic
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const docCards = document.querySelectorAll('.doc-card');
+  const urgentCard = document.getElementById('urgentActionSection');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary');
+        t.classList.add('bg-surface-container-low', 'text-secondary');
+      });
+      tab.classList.remove('bg-surface-container-low', 'text-secondary');
+      tab.classList.add('bg-primary', 'text-on-primary');
+
+      const filter = tab.getAttribute('data-filter');
+      
+      // Urgent replacement card visibility
+      if (filter === 'verified' || filter === 'review') {
+        urgentCard.classList.add('hidden');
+      } else {
+        urgentCard.classList.remove('hidden');
+      }
+
+      // Filter categorized cards
+      docCards.forEach(card => {
+        const cardStatus = card.getAttribute('data-status');
+        if (filter === 'all') {
+          card.classList.remove('hidden');
+        } else if (filter === 'action' && cardStatus === 'action') {
+          card.classList.remove('hidden');
+        } else if (filter === 'verified' && cardStatus === 'verified') {
+          card.classList.remove('hidden');
+        } else if (filter === 'review' && (cardStatus === 'review' || cardStatus === 'attached')) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Search filter
+  const docSearchInput = document.getElementById('docSearchInput');
+  const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+  if (docSearchInput) {
+    docSearchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      if (query.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+
+      docCards.forEach(card => {
+        const title = card.querySelector('h4').textContent.toLowerCase();
+        const desc = card.querySelector('p').textContent.toLowerCase();
+        if (title.includes(query) || desc.includes(query)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      docSearchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      docCards.forEach(card => card.classList.remove('hidden'));
+    });
+  }
+</script>
+</body></html>
