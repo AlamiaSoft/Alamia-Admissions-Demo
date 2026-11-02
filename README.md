@@ -49,3 +49,13 @@ npx serve .
 
 - **Evaluative Environment:** All applicant details (Ahmed Khan `DEMO-STD-001`) and institutional responses are synthetic illustrations for design and operational evaluation.
 - **Independent Coordination:** Alamia AdmissionsOS is an independent admissions coordination workspace and does not claim official university partnership, endorsement, or direct institutional API registry integration.
+
+
+## Guided walkthroughs
+
+The public portal provides two clickable, step-by-step tours:
+
+- **Adviser walkthrough:** worklist → candidate dossier → requirements & evidence → multiple applications → requirement governance → workflow dependencies.
+- **Student walkthrough:** home → journey → documents → messages → application status.
+
+Both follow the same fictional Ahmed Khan case. Use the **Guided demo** control on any screen to restart the current tour. This static prototype has no production backend; actions are illustrative only. See [Demo Scenario & Data Notes](docs/DEMO-SCENARIO.md) for canonical facts, personas and presentation rules.
