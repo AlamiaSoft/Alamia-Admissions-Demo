@@ -12,7 +12,7 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-full"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="Open Menu Drawer" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" id="drawer-open-btn" onclick="openNavDrawer()" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-xs">A</div><div class="flex flex-col"><span class="font-headline-sm text-[16px] text-on-surface font-bold tracking-tight leading-none">Alamia</span><span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider font-semibold leading-none mt-1">Student OS</span></div></div></div><div class="flex items-center gap-1.5"><button aria-label="Contact Adviser" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">headset_mic</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Profile" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 shadow-xs hover:ring-2 hover:ring-primary/20 transition-all" type="button"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-full"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="Open Navigation Menu" class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface hover:text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" id="open-drawer-btn" onclick="openDrawer()" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none shadow-xs">A</div><div class="flex flex-col"><span class="font-headline-sm text-[16px] text-on-surface font-bold tracking-tight leading-none">Alamia</span><span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider font-semibold leading-none mt-1">Student OS</span></div></div></div><div class="flex items-center gap-1.5"><button aria-label="Contact Adviser" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">headset_mic</span></button><button aria-label="Notifications" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="User Profile" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 shadow-xs hover:ring-2 hover:ring-primary/20 transition-all" type="button"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
 <!-- Governance Disclaimer & Exemplar Demarcation Banner -->
 <div class="bg-surface-container-high px-space-md py-space-sm">
 <div class="flex items-start gap-space-sm max-w-md mx-auto">
@@ -456,103 +456,142 @@
     closeWalkthroughModal();
     showToast("Walkthrough session reserved. Calendar invitation sent.");
   }
-</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a data-path="home" href="../home/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">dashboard</span><span class="font-label-sm text-label-sm leading-none">Home</span></a><a data-path="my-journey" href="../my-journey/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">timeline</span><span class="font-label-sm text-label-sm leading-none">My Journey</span></a><a data-path="documents" href="../documents/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">folder_open</span><span class="font-label-sm text-label-sm leading-none">Documents</span></a><a data-path="messages" href="../messages/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px] leading-none mb-1">chat_bubble_outline</span><span class="font-label-sm text-label-sm leading-none">Messages</span></a><a data-path="offer-and-status" href="../offer-status/code.html" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-primary font-semibold"><span class="material-symbols-outlined text-[22px] leading-none mb-1">verified</span><span class="font-label-sm text-label-sm leading-none">Offer &amp; Status</span></a>
-<a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 transition-colors mt-3 border border-amber-500/20" href="../../../index.html"><span class="material-symbols-outlined text-amber-700 text-[20px]">home</span><span class="font-label-md text-label-md font-semibold">Exit to Prototype Portal</span></a></div></nav>
+</script></main><nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/95 backdrop-blur-xl border-t border-surface-container/60 shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-primary font-semibold">
+  <div class="max-w-md mx-auto flex items-center justify-around h-16 px-1">
+    <a data-path="home" href="../home/code.html" class="flex-1 flex flex-col items-center justify-center min-w-0 py-1 transition-colors text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-[22px] leading-none mb-1" >dashboard</span>
+      <span class="text-[11px] leading-none font-medium truncate">Home</span>
+    </a>
+    <a data-path="my-journey" href="../my-journey/code.html" class="flex-1 flex flex-col items-center justify-center min-w-0 py-1 transition-colors text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-[22px] leading-none mb-1" >timeline</span>
+      <span class="text-[11px] leading-none font-medium truncate">Journey</span>
+    </a>
+    <a data-path="documents" href="../documents/code.html" class="flex-1 flex flex-col items-center justify-center min-w-0 py-1 transition-colors text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-[22px] leading-none mb-1" >folder_open</span>
+      <span class="text-[11px] leading-none font-medium truncate">Docs</span>
+    </a>
+    <a data-path="messages" href="../messages/code.html" class="flex-1 flex flex-col items-center justify-center min-w-0 py-1 transition-colors text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-[22px] leading-none mb-1" >chat_bubble_outline</span>
+      <span class="text-[11px] leading-none font-medium truncate">Messages</span>
+    </a>
+    <a data-path="offer-and-status" href="../offer-status/code.html" class="flex-1 flex flex-col items-center justify-center min-w-0 py-1 transition-colors text-primary font-semibold">
+      <span class="material-symbols-outlined text-[22px] leading-none mb-1" style="font-variation-settings: 'FILL' 1;">verified</span>
+      <span class="text-[11px] leading-none font-medium truncate">Status</span>
+    </a>
+  </div>
+</nav>
 <!-- Slide-over Drawer Menu Overlay -->
-<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer-backdrop" onclick="closeNavDrawer()"></div>
-<aside class="fixed inset-y-0 left-0 z-50 w-[84%] max-w-[320px] bg-surface-container-lowest shadow-2xl flex flex-col -translate-x-full transition-transform duration-300 ease-out select-none overflow-hidden" id="nav-drawer">
-<!-- Drawer Header / User Banner -->
-<div class="p-space-lg bg-surface-container-low border-b border-surface-container flex flex-col gap-space-md pt-safe">
-<div class="flex items-center justify-between">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm font-semibold shadow-xs">
-        AK
-      </div>
-<button aria-label="Close Drawer" class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="closeNavDrawer()" type="button">
-<span class="material-symbols-outlined text-[22px]">close</span>
-</button>
-</div>
-<div>
-<div class="flex items-center gap-1.5">
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ahmed Khan</h3>
-<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
-</div>
-<p class="font-code-sm text-code-sm text-outline">DEMO-STD-001 • ahmed••••@demo.alamia.edu</p>
-<div class="inline-flex items-center gap-1.5 mt-2 px-2 py-0.5 rounded-full bg-surface-container text-on-secondary-container font-label-sm text-label-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-<span class="">Conditional Offer Confirmed</span>
-</div>
-</div>
-</div>
-<!-- Navigation Link Sections -->
-<div class="flex-1 overflow-y-auto p-space-sm space-y-1">
-<div class="px-3 py-1 font-label-sm text-label-sm text-secondary uppercase tracking-wider">Navigation</div>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">dashboard</span>
-<span class="font-body-md text-body-md font-medium flex-1">Home / Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">timeline</span>
-<span class="font-body-md text-body-md font-medium flex-1">Admissions Journey</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">folder_open</span>
-<span class="font-body-md text-body-md font-medium flex-1">Document Centre</span>
-<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-code-sm text-code-sm font-semibold">1 Action</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">chat_bubble_outline</span>
-<span class="font-body-md text-body-md font-medium flex-1">Messages &amp; Adviser</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-primary bg-surface-container-low font-semibold transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
-<span class="font-body-md text-body-md flex-1">Offer &amp; Status</span>
-<span class="w-2 h-2 rounded-full bg-primary"></span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">account_circle</span>
-<span class="font-body-md text-body-md font-medium flex-1">My Profile &amp; Bio</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">flight_takeoff</span>
-<span class="font-body-md text-body-md font-medium flex-1">Visa &amp; EMGS Guidelines</span>
-</a>
-<div class="my-2 border-t border-surface-container"></div>
-<div class="px-3 py-1 font-label-sm text-label-sm text-secondary uppercase tracking-wider">Institutional Portals</div>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeNavDrawer()">
-<span class="material-symbols-outlined text-[20px] text-secondary">school</span>
-<span class="font-body-md text-body-md font-medium flex-1">Taylor's University Portal</span>
-<span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span>
-</a>
-</div>
-<!-- Drawer Footer -->
-<div class="p-space-md border-t border-surface-container bg-surface-container-low/50 pb-safe">
-<div class="flex items-center justify-between text-secondary font-code-sm text-code-sm">
-<span class="">Alamia AdmissionsOS</span>
-<span class="">v2.4.1</span>
-</div>
-</div>
-</aside>
+
 <script>
-  function openNavDrawer() {
-    const backdrop = document.getElementById('nav-drawer-backdrop');
-    const drawer = document.getElementById('nav-drawer');
-    if (backdrop && drawer) {
+  
+
+  
+</script>
+
+<div aria-label="Student Navigation Menu" aria-modal="true" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="mobile-drawer-overlay" role="dialog">
+  <div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 pointer-events-none" id="drawer-backdrop" onclick="closeDrawer()"></div>
+  <aside class="relative w-4/5 max-w-xs h-full bg-surface-container-lowest shadow-2xl flex flex-col justify-between z-10 overflow-y-auto transform -translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" id="drawer-panel">
+    <div class="p-space-md border-b border-surface-container">
+      <div class="flex items-center justify-between mb-space-md">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm select-none">A</div>
+          <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Alamia OS</span>
+        </div>
+        <button aria-label="Close Drawer" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="closeDrawer()" type="button">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="flex items-center gap-space-sm pt-1">
+        <div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+          <span class="material-symbols-outlined text-[22px]">person</span>
+        </div>
+        <div class="min-w-0 flex-1">
+          <h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Ahmed Khan</h4>
+          <p class="font-body-sm text-body-sm text-secondary truncate">ahmed.k@demo.alamia.edu</p>
+          <div class="flex items-center gap-1.5 mt-1">
+            <span class="font-code-sm text-code-sm text-secondary bg-surface-container-low px-1.5 py-0.5 rounded font-medium">DEMO-STD-001</span>
+            <span class="font-code-sm text-code-sm text-tertiary bg-tertiary-container/20 px-1.5 py-0.5 rounded font-medium">Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 py-space-sm px-space-xs space-y-0.5 overflow-y-auto">
+      <div class="px-space-md py-1 text-[11px] font-semibold text-secondary uppercase tracking-wider">Main Navigation</div>
+      <a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low font-medium transition-colors" href="../home/code.html" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">dashboard</span>
+        <span class="font-label-md text-label-md">Home Feed</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low font-medium transition-colors" href="../my-journey/code.html" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">conversion_path</span>
+        <span class="font-label-md text-label-md">Admissions Journey</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low font-medium transition-colors" href="../documents/code.html" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">folder_shared</span>
+        <span class="font-label-md text-label-md">Documents Vault</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low font-medium transition-colors" href="../messages/code.html" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+        <span class="font-label-md text-label-md">Messages &amp; Advising</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2.5 rounded-lg text-primary bg-surface-container-low font-semibold transition-colors" href="../offer-status/code.html" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+        <span class="font-label-md text-label-md">Offer &amp; Status</span>
+      </a>
+      <div class="px-space-md pt-3 pb-1 text-[11px] font-semibold text-secondary uppercase tracking-wider">Advisory Resources</div>
+      <a class="flex items-center gap-3 px-space-md py-2 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">public</span>
+        <span class="font-label-md text-label-md font-medium">Visa &amp; EMGS Guidelines</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">payments</span>
+        <span class="font-label-md text-label-md font-medium">Scholarships &amp; Tuition</span>
+      </a>
+      <a class="flex items-center gap-3 px-space-md py-2 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#" onclick="closeDrawer()">
+        <span class="material-symbols-outlined text-secondary text-[20px]">headset_mic</span>
+        <span class="font-label-md text-label-md font-medium">Contact Adviser Fatima</span>
+      </a>
+    </div>
+    <div class="p-space-md border-t border-surface-container bg-surface-container-low/50">
+      <div class="flex items-center justify-between mb-2">
+        <span class="font-code-sm text-code-sm text-secondary">Alamia Companion v2.4</span>
+        <span class="font-code-sm text-code-sm text-secondary">Interactive Demo</span>
+      </div>
+      <a class="flex items-center justify-center gap-2 py-2 px-space-md rounded-lg text-amber-800 bg-amber-500/10 hover:bg-amber-500/20 transition-colors font-label-md text-label-md border border-amber-500/20 mb-2 w-full text-center" href="../../../index.html">
+        <span class="material-symbols-outlined text-amber-700 text-[18px]">home</span>
+        <span class="font-semibold">Exit to Prototype Portal</span>
+      </a>
+      <button class="w-full flex items-center justify-center gap-2 py-1.5 px-space-md rounded-lg text-error hover:bg-error-container/40 transition-colors font-label-md text-label-md" onclick="closeDrawer()" type="button">
+        <span class="material-symbols-outlined text-[18px]">logout</span>
+        <span>Log Out</span>
+      </button>
+    </div>
+  </aside>
+</div>
+<script>
+  function openDrawer() {
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+    if (overlay && backdrop && panel) {
+      overlay.classList.remove('pointer-events-none');
       backdrop.classList.remove('opacity-0', 'pointer-events-none');
-      backdrop.classList.add('opacity-100');
-      drawer.classList.remove('-translate-x-full');
-      drawer.classList.add('translate-x-0');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('-translate-x-full');
+      panel.classList.add('translate-x-0');
       document.body.style.overflow = 'hidden';
     }
   }
 
-  function closeNavDrawer() {
-    const backdrop = document.getElementById('nav-drawer-backdrop');
-    const drawer = document.getElementById('nav-drawer');
-    if (backdrop && drawer) {
-      backdrop.classList.remove('opacity-100');
+  function closeDrawer() {
+    const overlay = document.getElementById('mobile-drawer-overlay');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+    if (overlay && backdrop && panel) {
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
       backdrop.classList.add('opacity-0', 'pointer-events-none');
-      drawer.classList.remove('translate-x-0');
-      drawer.classList.add('-translate-x-full');
+      panel.classList.remove('translate-x-0');
+      panel.classList.add('-translate-x-full');
+      overlay.classList.add('pointer-events-none');
       document.body.style.overflow = '';
     }
   }
